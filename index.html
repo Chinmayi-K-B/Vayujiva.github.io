@@ -3,155 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Professional Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: #007BFF;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background: #575757;
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        h1, h2 {
-            color: #007BFF;
-        }
-
-        .intro {
-            text-align: center;
-        }
-
-        .projects, .skills, .education, .contact {
-            margin-top: 3rem;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 1rem 0;
-            padding: 0.5rem;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        footer {
-            text-align: center;
-            background: #333;
-            color: white;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-
-        .contact a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Your Name | Aspiring Developer | Problem Solver</p>
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your Name | Developer | Innovator</p>
+        </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#intro">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Introduction Section -->
-    <section id="intro" class="intro">
-        <h2>About Me</h2>
-        <p>Hello! I’m [Your Name], a passionate developer who loves solving problems through technology. Welcome to my online portfolio where I share my journey, projects, and aspirations.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project 1:</strong> [Description of Project 1]</li>
-            <li><strong>Project 2:</strong> [Description of Project 2]</li>
-            <li><strong>Project 3:</strong> [Description of Project 3]</li>
-        </ul>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming: C++, Python, JavaScript</li>
-            <li>Web Development: HTML, CSS, React.js, Node.js</li>
-            <li>Problem-Solving and Algorithms</li>
-        </ul>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Bachelor's Degree:</strong> Computer Science and Engineering - [Your University]</li>
-            <li><strong>Certifications:</strong> [List of Certifications]</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to work together or have any questions, feel free to reach out!</p>
-        <ul>
-            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-            <li>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li>
-        </ul>
+    <!-- Main Content -->
+    <section class="intro">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate developer dedicated to solving problems with technology. Explore my portfolio to see my projects, skills, and background.</p>
+            <a href="about.html" class="btn">Learn More</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
 
 </body>
