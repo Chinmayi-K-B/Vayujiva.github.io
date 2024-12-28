@@ -3,99 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Responsive Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: #333;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem;
-            background: #f4f4f4;
-        }
-
-        section {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div><strong>CITY DESIGN</strong></div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="chinmayi.html">Chinmayi</a></li>
-            <li><a href="ananya.html">Ananya</a></li>
-            <li><a href="ria.html">Ria</a></li>
-            <li><a href="sanjana.html">Sanjana</a></li>
-        </ul>
-    </nav>
 
     <!-- Header Section -->
     <header>
-        <h1>Introduction</h1>
-        <p>We were given the opportunity to design a smart city based off our imagination within 1500 sq m of barren land. Our city is decentralized so that we could provide better facilities and focus on each part of our city while giving every part equal attention. </p>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your Name | Aspiring Developer | Problem Solver</p>
     </header>
 
-    <!-- Main Section -->
-    <section>
-        <h2>About the course</h2>
-        <h3>What is the course about?</h3>
-        <p> - Design and Analysis of Algorithms (DAA) is not just a branch of computer science; it is the very foundation of the field. Its principles extend beyond computer science and have applications in various domains, including science, business, and technology. This course focuses on recognizing the inherent patterns found in nature, as many natural processes inspire computational algorithms, and vice versa. It fosters analytical thinking, equipping students with problem-solving strategies applicable to a wide range of real-world challenges.
-        <h3> What kind of data structures and algorithms have you studied?</h3>
-        <p>Exploring data structures is like embarking on a journey through an intricate family of concepts. Arrays and strings resemble neat, orderly blocks of memory, while linked lists reflect the interconnected paths of web pages. Stacks and queues evoke familiar scenarios—stacks of biscuits or people waiting in line. Trees and tries open up a world of hierarchical relationships and efficient searches. Finally, skip lists, inspired by the randomness of coin tosses, introduce an element of chance while maintaining precision and speed.</p>
-        
-    
-    </p>
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="intro">
+        <h2>About Me</h2>
+        <p>Hello! I’m [Your Name], a passionate developer who loves solving problems through technology. Welcome to my online portfolio where I share my journey, projects, and aspirations.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Project 1:</strong> [Description of Project 1]</li>
+            <li><strong>Project 2:</strong> [Description of Project 2]</li>
+            <li><strong>Project 3:</strong> [Description of Project 3]</li>
+        </ul>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming: C++, Python, JavaScript</li>
+            <li>Web Development: HTML, CSS, React.js, Node.js</li>
+            <li>Problem-Solving and Algorithms</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Bachelor's Degree:</strong> Computer Science and Engineering - [Your University]</li>
+            <li><strong>Certifications:</strong> [List of Certifications]</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to work together or have any questions, feel free to reach out!</p>
+        <ul>
+            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <li>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li>
+        </ul>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
