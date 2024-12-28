@@ -1,136 +1,71 @@
-/* Global Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F8F3E6;
-    color: #333;
-}
-
-/* Navigation Bar */
+/* Navigation Bar Styling */
 nav {
-    background-color: #D8C4B6;
-    color: white;
+    background-color: #004a99;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: right;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-    padding-bottom: 4px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 1.2em;
+    border-radius: 5px;
 }
 
-nav ul li a:hover {
-    color: #F0BB78;
-    border-bottom: 2px solid #F0BB78;
+nav a:hover {
+    background-color: #003366;
 }
 
-/* Header Section */
+/* Add some padding to the top of the body to prevent content from being hidden behind the fixed nav bar */
+body {
+    padding-top: 50px;
+}
+
+/* Header Styling */
 header {
+    background-color: rgb(255, 252, 245);
+    color: rgb(0, 0, 0);
+    padding: 20px 10px;
     text-align: center;
-    padding: 3rem 2rem;
-    background: #F0BB78;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3em; /* Increase the font size */
+    font-family: 'Roboto', sans-serif; /* Change the font */
+    font-weight: bold; /* Ensure the font is bold */
 }
 
-header p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-/* Main Section */
-section {
+/* Main Content Styling */
+main {
+    padding: 20px;
+    background-color: #babde2;
+    border-radius: 8px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;*/
     text-align: center;
-    padding: 3rem 2rem;
-    background-color: #fff;
 }
 
-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+main h2 {
+    font-size: 2em;
     color: #333;
+    margin-bottom: 10px;
 }
 
-section h3 {
-    font-size: 1.6rem;
-    margin: 1rem 0;
-    color: #333;
-}
-
-section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Footer Section */
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #B59F78;
+    background-color: #dfaea1;
     color: white;
-    margin-top: 2rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Hover effects for links */
-nav ul li a:hover {
-    color: #F0BB78;
-    border-bottom: 2px solid #F0BB78;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    section {
-        padding: 2rem 1.5rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-
-    section h3 {
-        font-size: 1.4rem;
-    }
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
