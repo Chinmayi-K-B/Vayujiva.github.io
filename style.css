@@ -1,149 +1,112 @@
 /* General Styles */
 body {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f9;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header Section */
-header {
-    background: linear-gradient(to right, #007BFF, #00D2FF);
+nav {
+    background-color: #D8C4B6;
     color: white;
-    text-align: center;
-    padding: 3rem 0;
-    position: relative;
-}
-
-header h1 span {
-    color: #FFD700;
-}
-
-header .btn {
-    background: #FFD700;
-    color: #333;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
-    margin-top: 1rem;
-    display: inline-block;
-    animation: bounce 2s infinite;
-}
-
-/* Navbar */
-.navbar {
-    position: sticky;
-    top: 0;
-    background: #333;
-    color: white;
-    padding: 0.5rem 0;
-    z-index: 1000;
-}
-
-.navbar ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
     list-style: none;
+    display: flex;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
 
-.navbar ul li {
-    margin: 0 1rem;
-}
-
-.navbar ul li a {
-    text-decoration: none;
+.nav-links li a {
     color: white;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.navbar ul li a:hover {
-    background: #FFD700;
-    color: #333;
-    border-radius: 5px;
+.nav-links li a:hover {
+    color: #F0BB78;
 }
 
-/* Sections */
-.section {
-    padding: 3rem 0;
+header {
+    background: linear-gradient(to bottom right, #F0BB78, #D8C4B6);
+    color: white;
     text-align: center;
-    background: white;
-    margin: 1rem 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 4rem 2rem;
 }
 
-.section-title {
-    font-size: 2rem;
-    color: #007BFF;
-    margin-bottom: 1rem;
+.header-content {
+    max-width: 800px;
+    margin: auto;
 }
 
-.section-description {
-    font-size: 1.2rem;
+.header-image {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    animation: fade-in 2s ease-in-out;
 }
 
-/* Project Cards */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.project-card {
-    padding: 1rem;
-    background: #f4f4f9;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+/* Section Styles */
+.about-course {
+    background-color: #F7F5F2;
+    padding: 2rem 1rem;
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
+.section-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.course-item {
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fade-in 1s forwards ease-in-out;
+}
+
+.course-item h3 {
+    font-size: 1.5rem;
+    color: #B59F78;
+}
+
+.responsive-image {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    animation: zoom-in 2s ease-in-out;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #B59F78;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 /* Animations */
 @keyframes fade-in {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-    }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
     }
 }
 
@@ -154,28 +117,4 @@ header .btn {
     to {
         transform: scale(1);
     }
-}
-
-.animate-fade-in {
-    animation: fade-in 1.5s ease-in-out;
-}
-
-.animate-bounce {
-    animation: bounce 2s infinite;
-}
-
-.animate-slide-in {
-    animation: slide-in 1s ease-in-out;
-}
-
-.animate-zoom-in {
-    animation: zoom-in 0.8s ease-in-out;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
 }
