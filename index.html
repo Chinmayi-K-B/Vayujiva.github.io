@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio</title>
+    <title>Vintage Tech Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,12 +12,12 @@
             padding: 0;
             box-sizing: border-box;
             overflow-x: hidden;
-            background-color: #f0f0f0; /* Light gray background for better contrast */
+            background-color: #f0f0f0; /* Off-white background */
         }
 
         nav {
             background-color: #333;
-            color: white;
+            color: #f0c674; /* Vintage gold */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -31,13 +31,14 @@
         }
 
         nav.scrolled {
-            background-color: rgba(51, 51, 51, 0.9); /* Slightly transparent when scrolled */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            background-color: rgba(51, 51, 51, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            color: #f0c674; /* Vintage gold */
         }
 
         nav ul {
@@ -52,22 +53,22 @@
         }
 
         nav ul li a {
-            color: white;
+            color: #f0c674; /* Vintage gold */
             text-decoration: none;
             font-size: 1rem;
             transition: color 0.3s, transform 0.3s;
         }
 
         nav ul li a:hover {
-            color: #F0BB78;
+            color: #b08d57; /* Darker gold */
             transform: scale(1.1);
         }
 
         header {
-            background-image: url('your-background-image.jpg'); /* Replace with your image */
+            background-image: url('vintage-tech-background.jpg'); /* Replace with your vintage tech image */
             background-size: cover;
             background-position: center;
-            color: white;
+            color: #f0c674; /* Vintage gold */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -79,6 +80,7 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1.5s ease-out;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
         }
 
         header p {
@@ -86,13 +88,14 @@
             line-height: 1.6;
             animation: fadeInUp 2s ease-out;
             animation-delay: 0.5s;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .content {
             padding: 2rem;
             max-width: 1200px;
             margin: auto;
-            margin-top: 5rem; /* Adjust for space below header */
+            margin-top: 5rem;
         }
 
         .content h2 {
@@ -117,7 +120,7 @@
         }
 
         .project {
-            width: 48%; /* Adjust as needed */
+            width: 48%;
             margin-bottom: 2rem;
         }
 
@@ -126,11 +129,12 @@
             height: auto;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 2px solid #b08d57; /* Vintage gold border */
         }
 
         footer {
             background-color: #333;
-            color: white;
+            color: #f0c674; /* Vintage gold */
             text-align: center;
             padding: 1rem 0;
             position: relative;
@@ -140,8 +144,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #F0BB78;
-            color: white;
+            background-color: #b08d57; /* Darker gold */
+            color: #333;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -155,7 +159,7 @@
         }
 
         .scroll-up:hover {
-            background-color: #D8C4B6;
+            background-color: #f0c674; /* Vintage gold */
         }
 
         .show-scroll-up {
@@ -237,14 +241,14 @@
             }
 
             .project {
-                width: 100%; /* Make projects full width on smaller screens */
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">My Portfolio</div>
+        <div class="logo">Vintage Tech</div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -255,19 +259,8 @@
     </nav>
 
     <header id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Explore my work, skills, and passion for technology and design. Let's create something amazing together!</p>
+        <h1>Welcome to My Vintage Tech Portfolio</h1>
+        <p>A journey through the past, built for the future.</p>
     </header>
 
     <section class="content" id="about">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec accumsan eros, at ullamcorper justo. Integer fermentum purus ac nisi feugiat, in convallis arcu gravida.</p>
-    </section>
-
-    <section class="content" id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project">
-                <img src="project1.jpg" alt="Project 1"> 
-            </div>
-            <div
