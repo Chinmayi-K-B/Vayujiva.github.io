@@ -11,6 +11,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            overflow-x: hidden;
+            background-color: #f0f0f0; /* Light gray background for better contrast */
         }
 
         nav {
@@ -20,14 +22,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
-        nav:hover {
-            background-color: #444;
+        nav.scrolled {
+            background-color: rgba(51, 51, 51, 0.9); /* Slightly transparent when scrolled */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         nav .logo {
@@ -59,41 +64,49 @@
         }
 
         header {
-            text-align: center;
-            background: linear-gradient(to bottom right, #F0BB78, #D8C4B6);
+            background-image: url('your-background-image.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 4rem 2rem;
-            animation: fadeIn 2s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            animation: fadeInUp 1.5s ease-out;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             line-height: 1.6;
+            animation: fadeInUp 2s ease-out;
+            animation-delay: 0.5s;
         }
 
         .content {
             padding: 2rem;
             max-width: 1200px;
             margin: auto;
+            margin-top: 5rem; /* Adjust for space below header */
         }
 
         .content h2 {
             font-size: 2rem;
             color: #333;
             margin-bottom: 1rem;
-            animation: slideInFromLeft 1.5s ease-in-out;
+            animation: slideInFromLeft 1.5s ease-out;
         }
 
         .content p {
             font-size: 1rem;
             line-height: 1.6;
             color: #555;
-            animation: fadeIn 2s ease-in-out;
+            animation: fadeInUp 2s ease-out;
         }
 
         footer {
@@ -101,37 +114,84 @@
             color: white;
             text-align: center;
             padding: 1rem 0;
-            animation: slideInFromBottom 1.5s ease-in-out;
+            position: relative;
         }
 
-        @keyframes fadeIn {
-            from {
+        .scroll-up {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #F0BB78;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .scroll-up:hover {
+            background-color: #D8C4B6;
+        }
+
+        .show-scroll-up {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Unique Animations */
+        @keyframes fadeInUp {
+            0% {
                 opacity: 0;
+                transform: translateY(20px);
             }
-            to {
+            100% {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
 
         @keyframes slideInFromLeft {
-            from {
+            0% {
                 transform: translateX(-100%);
                 opacity: 0;
             }
-            to {
+            100% {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
 
-        @keyframes slideInFromBottom {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
+        @keyframes wobble {
+            0%, 100% {
+                transform: none;
             }
-            to {
-                transform: translateY(0);
-                opacity: 1;
+            15% {
+                transform: translateX(-10px);
+            }
+            30% {
+                transform: translateX(10px);
+            }
+            45% {
+                transform: translateX(-5px);
+            }
+            60% {
+                transform: translateX(5px);
+            }
+            75% {
+                transform: translateX(-2px);
+            }
+            90% {
+                transform: translateX(2px);
             }
         }
 
@@ -160,32 +220,54 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav>
         <div class="logo">My Portfolio</div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Header Section -->
-    <header>
+    <header id="home">
         <h1>Welcome to My Portfolio</h1>
         <p>Explore my work, skills, and passion for technology and design. Let's create something amazing together!</p>
     </header>
 
-    <!-- Main Content -->
-    <section class="content">
+    <section class="content" id="about">
         <h2>About Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec accumsan eros, at ullamcorper justo. Integer fermentum purus ac nisi feugiat, in convallis arcu gravida.</p>
+    </section>
+
+    <section class="content" id="projects">
+        <h2>Projects</h2>
+        <p>Coming Soon...</p>
+    </section>
+
+    <section class="content" id="skills">
+        <h2>Skills</h2>
+        <p>Coming Soon...</p>
+    </section>
+
+    <section class="content" id="contact">
+        <h2>Contact</h2>
+        <p>Coming Soon...</p>
     </section>
 
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
-</body>
-</html>
+
+    <button class="scroll-up">
+        <i class="fas fa-arrow-up"></i> 
+    </button>
+
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
