@@ -57,6 +57,14 @@
             margin-bottom: 0.5rem;
         }
 
+        pre {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            overflow-x: auto;
+        }
+
         footer {
             background-color: #4CAF50;
             color: white;
@@ -103,6 +111,61 @@
             <li>Quick lookup for the nearest available parking slot in a specific area.</li>
         </ul>
 
+        <pre>
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+class TrieNode {
+public:
+    unordered_map<char, TrieNode*> children;
+    bool isEndOfSlot;
+    TrieNode() : isEndOfSlot(false) {}
+};
+
+class ParkingTrie {
+    TrieNode* root;
+    
+public:
+    ParkingTrie() {
+        root = new TrieNode();
+    }
+    
+    void insert(string slot) {
+        TrieNode* node = root;
+        for (char ch : slot) {
+            if (node->children.find(ch) == node->children.end()) {
+                node->children[ch] = new TrieNode();
+            }
+            node = node->children[ch];
+        }
+        node->isEndOfSlot = true;
+    }
+    
+    bool search(string slot) {
+        TrieNode* node = root;
+        for (char ch : slot) {
+            if (node->children.find(ch) == node->children.end()) {
+                return false;
+            }
+            node = node->children[ch];
+        }
+        return node->isEndOfSlot;
+    }
+};
+
+int main() {
+    ParkingTrie trie;
+    trie.insert("City1_LotA_Slot3");
+    trie.insert("City1_LotB_Slot1");
+    
+    cout << "Is Slot City1_LotA_Slot3 available? " << (trie.search("City1_LotA_Slot3") ? "Yes" : "No") << endl;
+    cout << "Is Slot City1_LotA_Slot4 available? " << (trie.search("City1_LotA_Slot4") ? "Yes" : "No") << endl;
+    
+    return 0;
+}
+        </pre>
+
         <h5>Dynamic Queue for Real-time Slot Allocation</h5>
         <p><strong>Functionality:</strong> A queue can dynamically manage the order of vehicles waiting for parking slots.</p>
         <p><strong>Example Usage:</strong></p>
@@ -110,6 +173,51 @@
             <li>Vehicles are queued as they approach the parking area.</li>
             <li>As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).</li>
         </ul>
+
+        <pre>
+#include <iostream>
+#include <queue>
+using namespace std;
+
+struct Vehicle {
+    string licensePlate;
+    int arrivalTime;
+    
+    bool operator>(const Vehicle& v) const {
+        return arrivalTime > v.arrivalTime;
+    }
+};
+
+class ParkingQueue {
+    priority_queue<Vehicle, vector<Vehicle>, greater<Vehicle>> queue;
+    
+public:
+    void addVehicle(string licensePlate, int arrivalTime) {
+        queue.push({licensePlate, arrivalTime});
+    }
+    
+    void allocateSlot() {
+        if (!queue.empty()) {
+            Vehicle v = queue.top();
+            queue.pop();
+            cout << "Allocating slot to vehicle: " << v.licensePlate << endl;
+        } else {
+            cout << "No vehicles in queue!" << endl;
+        }
+    }
+};
+
+int main() {
+    ParkingQueue pq;
+    pq.addVehicle("AB123CD", 2);
+    pq.addVehicle("XY987ZT", 1);
+    
+    pq.allocateSlot(); // Should allocate to XY987ZT
+    pq.allocateSlot(); // Should allocate to AB123CD
+    
+    return 0;
+}
+        </pre>
 
         <h3>2. EV Charging Station Management</h3>
         <p><strong>Problem:</strong> The need to efficiently manage electric vehicle charging stations to support the growing adoption of EVs and ensure optimal usage of charging resources.</p>
@@ -124,17 +232,50 @@
             <li>Quick lookup for the nearest available charging station or slot, considering factors like station type and availability.</li>
         </ul>
 
-        <h5>Dynamic Queue for Real-time Charging Slot Allocation</h5>
-        <p><strong>Functionality:</strong> A queue can dynamically manage vehicles waiting for available charging slots in a prioritized order.</p>
-        <p><strong>Example Usage:</strong></p>
-        <ul>
-            <li>Vehicles are queued as they arrive at the charging station, with priority given to vehicles that have been waiting the longest or have a higher priority need (e.g., long-range EVs needing quick charging).</li>
-            <li>As charging slots become available, vehicles are allocated the nearest available slot based on their position in the queue.</li>
-        </ul>
-    </section>
+        <pre>
+#include <iostream>
+#include <unordered_map>
+using namespace std;
 
-    <footer>
-        <p>&copy; 2024 Smart City Solutions. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+class EVChargingTrieNode {
+public:
+    unordered_map<char, EVChargingTrieNode*> children;
+    bool isEndOfSlot;
+    EVChargingTrieNode() : isEndOfSlot(false) {}
+};
+
+class EVChargingTrie {
+    EVChargingTrieNode* root;
+    
+public:
+    EVChargingTrie() {
+        root = new EVChargingTrieNode();
+    }
+    
+    void insert(string slot) {
+        EVChargingTrieNode* node = root;
+        for (char ch : slot) {
+            if (node->children.find(ch) == node->children.end()) {
+                node->children[ch] = new EVChargingTrieNode();
+            }
+            node = node->children[ch];
+        }
+        node->isEndOfSlot = true;
+    }
+    
+    bool search(string slot) {
+        EVChargingTrieNode* node = root;
+        for (char ch : slot) {
+            if (node->children.find(ch) == node->children.end()) {
+                return false;
+            }
+            node = node->children[ch];
+        }
+        return node->isEndOfSlot;
+    }
+};
+
+int main() {
+    EVChargingTrie trie;
+    trie.insert("City1_StationA_Slot3");
+   
