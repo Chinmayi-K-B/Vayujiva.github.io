@@ -4,6 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
+    background-color: #f4f4f9;
 }
 
 .container {
@@ -12,30 +13,39 @@ body {
     padding: 0 20px;
 }
 
+/* Header Section */
 header {
     background: linear-gradient(to right, #007BFF, #00D2FF);
     color: white;
-    padding: 2rem 0;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
+    padding: 3rem 0;
+    position: relative;
 }
 
-header h1 {
-    font-size: 2.5rem;
+header h1 span {
+    color: #FFD700;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+header .btn {
+    background: #FFD700;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: inline-block;
+    animation: bounce 2s infinite;
 }
 
+/* Navbar */
 .navbar {
-    background: #333;
-    padding: 0.5rem 0;
     position: sticky;
     top: 0;
+    background: #333;
+    color: white;
+    padding: 0.5rem 0;
     z-index: 1000;
-    animation: slideDown 1s ease-in-out;
 }
 
 .navbar ul {
@@ -59,53 +69,53 @@ header p {
 }
 
 .navbar ul li a:hover {
-    background: #007BFF;
-    color: white;
+    background: #FFD700;
+    color: #333;
     border-radius: 5px;
 }
 
-.intro {
+/* Sections */
+.section {
+    padding: 3rem 0;
     text-align: center;
-    padding: 4rem 0;
-    background: #f4f4f9;
-    animation: fadeInUp 1.5s ease-in-out;
+    background: white;
+    margin: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.intro h2 {
+.section-title {
     font-size: 2rem;
     color: #007BFF;
+    margin-bottom: 1rem;
 }
 
-.intro p {
-    margin-top: 1rem;
+.section-description {
     font-size: 1.2rem;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background: #007BFF;
-    color: white;
-    text-decoration: none;
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    padding: 1rem;
+    background: #f4f4f9;
     border-radius: 5px;
-    font-weight: 600;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #0056b3;
-}
-
-footer {
+    border: 1px solid #ddd;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: white;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
 }
 
 /* Animations */
-@keyframes fadeIn {
+@keyframes fade-in {
     from {
         opacity: 0;
     }
@@ -114,40 +124,58 @@ footer {
     }
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
-@keyframes slideDown {
+@keyframes slide-in {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateX(-50px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+@keyframes zoom-in {
+    from {
+        transform: scale(0.9);
     }
+    to {
+        transform: scale(1);
+    }
+}
 
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
+.animate-fade-in {
+    animation: fade-in 1.5s ease-in-out;
+}
 
-    .navbar ul li {
-        margin: 0.5rem 0;
-    }
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-slide-in {
+    animation: slide-in 1s ease-in-out;
+}
+
+.animate-zoom-in {
+    animation: zoom-in 0.8s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
