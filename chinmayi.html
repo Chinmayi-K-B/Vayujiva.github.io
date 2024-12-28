@@ -74,6 +74,15 @@
             bottom: 0;
             width: 100%;
         }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -111,67 +120,7 @@
             <li>Quick lookup for the nearest available parking slot in a specific area.</li>
         </ul>
 
-        <pre>
-#include <iostream>
-#include <unordered_map>
-#include <string>
-using namespace std;
-
-// TrieNode class to represent each level of the Trie
-class TrieNode {
-public:
-    unordered_map<char, TrieNode*> children; // Map to hold children nodes
-    bool isEndOfSlot; // Flag to mark end of a valid slot
-    
-    TrieNode() : isEndOfSlot(false) {}
-};
-
-// ParkingTrie class to manage parking slots using Trie
-class ParkingTrie {
-    TrieNode* root; // Root node of the trie
-
-public:
-    ParkingTrie() {
-        root = new TrieNode();
-    }
-
-    // Insert a parking slot in the Trie
-    void insert(const string& slot) {
-        TrieNode* node = root;
-        for (char ch : slot) {
-            if (node->children.find(ch) == node->children.end()) {
-                node->children[ch] = new TrieNode();
-            }
-            node = node->children[ch];
-        }
-        node->isEndOfSlot = true;
-    }
-
-    // Search for a parking slot in the Trie
-    bool search(const string& slot) const {
-        TrieNode* node = root;
-        for (char ch : slot) {
-            if (node->children.find(ch) == node->children.end()) {
-                return false;
-            }
-            node = node->children[ch];
-        }
-        return node->isEndOfSlot;
-    }
-};
-
-int main() {
-    ParkingTrie trie;
-    trie.insert("City1_LotA_Slot3");
-    trie.insert("City1_LotB_Slot1");
-    
-    // Checking availability of slots
-    cout << "Is Slot City1_LotA_Slot3 available? " << (trie.search("City1_LotA_Slot3") ? "Yes" : "No") << endl;
-    cout << "Is Slot City1_LotA_Slot4 available? " << (trie.search("City1_LotA_Slot4") ? "Yes" : "No") << endl;
-    
-    return 0;
-}
-        </pre>
+        <p>View the full <a href="https://github.com/yourusername/parking-trie" target="_blank">Smart Parking Trie Code</a> on GitHub</p>
 
         <h5>Dynamic Queue for Real-time Slot Allocation</h5>
         <p><strong>Functionality:</strong> A queue can dynamically manage the order of vehicles waiting for parking slots.</p>
@@ -181,57 +130,7 @@ int main() {
             <li>As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).</li>
         </ul>
 
-        <pre>
-#include <iostream>
-#include <queue>
-#include <string>
-using namespace std;
-
-// Structure to hold information about vehicles
-struct Vehicle {
-    string licensePlate;
-    int arrivalTime;
-    
-    // Custom comparison for priority queue (longest waiting vehicle first)
-    bool operator>(const Vehicle& v) const {
-        return arrivalTime > v.arrivalTime;
-    }
-};
-
-// Class to manage parking queue using priority queue
-class ParkingQueue {
-    priority_queue<Vehicle, vector<Vehicle>, greater<Vehicle>> queue; // Priority queue to manage vehicles
-    
-public:
-    // Add vehicle to the queue
-    void addVehicle(const string& licensePlate, int arrivalTime) {
-        queue.push({licensePlate, arrivalTime});
-    }
-
-    // Allocate slot to the vehicle at the front of the queue
-    void allocateSlot() {
-        if (!queue.empty()) {
-            Vehicle v = queue.top();
-            queue.pop();
-            cout << "Allocating slot to vehicle: " << v.licensePlate << endl;
-        } else {
-            cout << "No vehicles in queue!" << endl;
-        }
-    }
-};
-
-int main() {
-    ParkingQueue pq;
-    pq.addVehicle("AB123CD", 2);
-    pq.addVehicle("XY987ZT", 1);
-    
-    // Allocating slots based on priority (arrival time)
-    pq.allocateSlot(); // Should allocate to XY987ZT
-    pq.allocateSlot(); // Should allocate to AB123CD
-    
-    return 0;
-}
-        </pre>
+        <p>View the full <a href="https://github.com/yourusername/parking-queue" target="_blank">Parking Queue Code</a> on GitHub</p>
 
         <h3>2. EV Charging Station Management</h3>
         <p><strong>Problem:</strong> The need to efficiently manage electric vehicle charging stations to support the growing adoption of EVs and ensure optimal usage of charging resources.</p>
@@ -242,4 +141,26 @@ int main() {
         <p><strong>Functionality:</strong> A trie can efficiently store and retrieve the availability of EV charging slots based on location, type of station (e.g., Level 1, Level 2, or DC Fast Charging), and other factors.</p>
         <p><strong>Example Usage:</strong></p>
         <ul>
-            <li>Each node in the trie represents a level of detail (e.g., city
+            <li>Each node in the trie represents a level of detail (e.g., city > charging station > slot number).</li>
+            <li>Quick lookup for the nearest available charging station or slot, considering factors like station type and availability.</li>
+        </ul>
+
+        <p>View the full <a href="https://github.com/yourusername/ev-charging-trie" target="_blank">EV Charging Trie Code</a> on GitHub</p>
+
+        <h5>Dynamic Queue for Real-time EV Slot Allocation</h5>
+        <p><strong>Functionality:</strong> A queue manages the order of vehicles waiting for an EV charging station slot, ensuring fair and timely access to charging resources.</p>
+        <p><strong>Example Usage:</strong></p>
+        <ul>
+            <li>Vehicles are queued as they arrive at a charging station.</li>
+            <li>As slots become available, the vehicle at the front of the queue is allocated a charging slot.</li>
+        </ul>
+
+        <p>View the full <a href="https://github.com/yourusername/ev-charging-queue" target="_blank">EV Charging Queue Code</a> on GitHub</p>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SDG Goal 11: Smart City Solutions</p>
+    </footer>
+</body>
+</html>
