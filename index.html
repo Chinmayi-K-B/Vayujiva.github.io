@@ -10,8 +10,6 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F8F3E6;
-            transition: background-color 0.5s ease;
         }
 
         nav {
@@ -21,8 +19,6 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.5rem 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-out;
         }
 
         nav ul {
@@ -40,121 +36,28 @@
             color: white;
             text-decoration: none;
             font-size: 1rem;
-            position: relative;
-            padding-bottom: 4px;
-            transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
-            text-decoration: none;
-            color: #F0BB78;
-            border-bottom: 2px solid #F0BB78;
+            text-decoration: underline;
         }
 
         header {
             text-align: center;
             padding: 2rem;
             background: #F0BB78;
-            color: white;
-            animation: slideIn 1s ease-out;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
         }
 
         section {
             text-align: center;
             padding: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        section h3 {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            color: #333;
-        }
-
-        section p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
         }
 
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #B59F78;
+            background-color: B59F78;
             color: white;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-30px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Hover effects for links */
-        nav ul li a:hover {
-            color: #F0BB78;
-            border-bottom: 2px solid #F0BB78;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                flex-direction: column;
-                margin-top: 1rem;
-            }
-
-            nav ul li {
-                margin: 0.5rem 0;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
         }
     </style>
 </head>
@@ -182,13 +85,13 @@
     <section>
         <h2>About the course</h2>
         <h3>What is the course about?</h3>
-        <p> - Design and Analysis of Algorithms (DAA) is not just a branch of computer science; it is the very foundation of the field. Its principles extend beyond computer science and have applications in various domains, including science, business, and technology. This course focuses on recognizing the inherent patterns found in nature, as many natural processes inspire computational algorithms, and vice versa. It fosters analytical thinking, equipping students with problem-solving strategies applicable to a wide range of real-world challenges.</p>
-        
+        <p> - Design and Analysis of Algorithms (DAA) is not just a branch of computer science; it is the very foundation of the field. Its principles extend beyond computer science and have applications in various domains, including science, business, and technology. This course focuses on recognizing the inherent patterns found in nature, as many natural processes inspire computational algorithms, and vice versa. It fosters analytical thinking, equipping students with problem-solving strategies applicable to a wide range of real-world challenges.
         <h3> What kind of data structures and algorithms have you studied?</h3>
         <p>Exploring data structures is like embarking on a journey through an intricate family of concepts. Arrays and strings resemble neat, orderly blocks of memory, while linked lists reflect the interconnected paths of web pages. Stacks and queues evoke familiar scenarios—stacks of biscuits or people waiting in line. Trees and tries open up a world of hierarchical relationships and efficient searches. Finally, skip lists, inspired by the randomness of coin tosses, introduce an element of chance while maintaining precision and speed.</p>
-        
         <h3>How do you connect the course with real time applications?</h3>
-        <p>We are both aware and oblivious to the algorithms that permeate our lives, much like the omnipresent air we breathe. Dijkstra’s Algorithm guides us home through GPS, ensuring the quickest route, while sorting algorithms managing massive datasets in e-commerce platforms. These algorithms take complex challenges and carve them into elegant solutions, quietly enhancing our daily technological interactions and making our digital experiences smoother and more intuitive. They are the invisible hands that optimize, protect, and personalize the technology we rely on every day.</p>
+        <p>We are both aware and oblivious to the algorithms that permeate our lives, much like the omnipresent air we breathe. Dijkstra’s Algorithm guides us home through GPS, ensuring the quickest route, while sorting algorithms managing massive datasets in e-commerce platforms. These algorithms take complex challenges and carve them into elegant solutions, quietly enhancing our daily technological interactions and making our digital experiences smoother and more intuitive. They are the invisible hands that optimize, protect, and personalize the technology we rely on every day</p>
+    
+    </p>
     </section>
 
     <!-- Footer -->
