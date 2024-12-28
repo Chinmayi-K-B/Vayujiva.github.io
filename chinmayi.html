@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDG Goal 11: Smart Parking Systems</title>
+    <title>SDG Goal 11: Smart City Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -70,7 +70,7 @@
 </head>
 <body>
     <header>
-        <h1>SDG Goal 11: Smart Parking Systems</h1>
+        <h1>SDG Goal 11: Smart City Solutions</h1>
     </header>
 
     <section>
@@ -84,13 +84,18 @@
 
     <section>
         <h2>Definitions and Concepts</h2>
-        <p>Efficient management of urban parking spaces is essential to reduce traffic congestion and enhance accessibility. Smart parking systems leverage technology to optimize parking availability and guide vehicles to open spots in real-time. These systems use data structures like tries and queues for efficient handling of parking slot information and vehicle routing.</p>
+        <p>Efficient management of urban transportation systems, such as parking and EV charging stations, is essential to reduce congestion and improve accessibility. Smart city solutions leverage technology to optimize resources, such as parking availability and real-time charging station management, ensuring sustainable urban mobility.</p>
     </section>
 
     <section>
-        <h2>Algorithmic Applications</h2>
+        <h2>Identified Business Cases</h2>
         
-        <h3>1. Parking Slot Availability using Trie</h3>
+        <h3>1. Smart Parking Systems</h3>
+        <p><strong>Problem:</strong> Traffic congestion due to inefficient parking space management and lack of real-time availability information.</p>
+        <p><strong>Solution:</strong> Smart parking systems that utilize technologies such as tries and queues to optimize parking availability and direct vehicles to open spots in real-time.</p>
+        
+        <h4>Algorithmic Applications:</h4>
+        <h5>Parking Slot Availability using Trie</h5>
         <p><strong>Functionality:</strong> A trie can store and retrieve available parking slots based on location and type (e.g., compact, regular, or handicapped) efficiently.</p>
         <p><strong>Example Usage:</strong></p>
         <ul>
@@ -98,12 +103,33 @@
             <li>Quick lookup for the nearest available parking slot in a specific area.</li>
         </ul>
 
-        <h3>2. Dynamic Queue for Real-time Slot Allocation</h3>
+        <h5>Dynamic Queue for Real-time Slot Allocation</h5>
         <p><strong>Functionality:</strong> A queue can dynamically manage the order of vehicles waiting for parking slots.</p>
         <p><strong>Example Usage:</strong></p>
         <ul>
             <li>Vehicles are queued as they approach the parking area.</li>
             <li>As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).</li>
+        </ul>
+
+        <h3>2. EV Charging Station Management</h3>
+        <p><strong>Problem:</strong> The need to efficiently manage electric vehicle charging stations to support the growing adoption of EVs and ensure optimal usage of charging resources.</p>
+        <p><strong>Solution:</strong> Smart management of EV charging stations that utilizes data structures like tries and queues for real-time allocation and efficient utilization of charging slots.</p>
+        
+        <h4>Algorithmic Applications:</h4>
+        <h5>EV Charging Slot Availability using Trie</h5>
+        <p><strong>Functionality:</strong> A trie can efficiently store and retrieve the availability of EV charging slots based on location, type of station (e.g., Level 1, Level 2, or DC Fast Charging), and other factors.</p>
+        <p><strong>Example Usage:</strong></p>
+        <ul>
+            <li>Each node in the trie represents a level of detail (e.g., city > charging station > slot number).</li>
+            <li>Quick lookup for the nearest available charging station or slot, considering factors like station type and availability.</li>
+        </ul>
+
+        <h5>Dynamic Queue for Real-time Charging Slot Allocation</h5>
+        <p><strong>Functionality:</strong> A queue can dynamically manage vehicles waiting for available charging slots in a prioritized order.</p>
+        <p><strong>Example Usage:</strong></p>
+        <ul>
+            <li>Vehicles are queued as they arrive at the charging station, with priority given to vehicles that have been waiting the longest or have a higher priority need (e.g., long-range EVs needing quick charging).</li>
+            <li>As charging slots become available, vehicles are allocated the nearest available slot based on their position in the queue.</li>
         </ul>
     </section>
 
@@ -112,4 +138,3 @@
     </footer>
 </body>
 </html>
-
