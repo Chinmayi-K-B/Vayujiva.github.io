@@ -109,6 +109,25 @@
             animation: fadeInUp 2s ease-out;
         }
 
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .project {
+            width: 48%; /* Adjust as needed */
+            margin-bottom: 2rem;
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -216,6 +235,10 @@
             .content p {
                 font-size: 0.9rem;
             }
+
+            .project {
+                width: 100%; /* Make projects full width on smaller screens */
+            }
         }
     </style>
 </head>
@@ -243,31 +266,8 @@
 
     <section class="content" id="projects">
         <h2>Projects</h2>
-        <p>Coming Soon...</p>
-    </section>
-
-    <section class="content" id="skills">
-        <h2>Skills</h2>
-        <p>Coming Soon...</p>
-    </section>
-
-    <section class="content" id="contact">
-        <h2>Contact</h2>
-        <p>Coming Soon...</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-
-    <button class="scroll-up">
-        <i class="fas fa-arrow-up"></i> 
-    </button>
-
-    <script>
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
+        <div class="project-container">
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1"> 
+            </div>
+            <div
