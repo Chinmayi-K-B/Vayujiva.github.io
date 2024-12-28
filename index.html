@@ -3,59 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Responsive Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #F0BB78;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(to bottom right, #F0BB78, #D8C4B6);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <div class="logo"><strong>CITY DESIGN</strong></div>
-        <ul class="nav-links">
+        <div class="logo">My Portfolio</div>
+        <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="chinmayi.html">Chinmayi</a></li>
-            <li><a href="ananya.html">Ananya</a></li>
-            <li><a href="ria.html">Ria</a></li>
-            <li><a href="sanjana.html">Sanjana</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Header Section -->
     <header>
-        <div class="header-content">
-            <h1>Introduction</h1>
-            <p>We were given the opportunity to design a smart city based on our imagination within 1500 sq m of barren land. Our city is decentralized to provide better facilities and focus on each part of our city while giving every part equal attention.</p>
-            <img src="city-design.gif" alt="Smart City Design" class="header-image">
-        </div>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work, skills, and passion for technology and design. Let's create something amazing together!</p>
     </header>
 
-    <!-- Main Section -->
-    <section class="about-course">
-        <div class="section-container">
-            <h2>About the Course</h2>
-
-            <div class="course-item animate-fade-in">
-                <h3>What is the course about?</h3>
-                <p>Design and Analysis of Algorithms (DAA) is not just a branch of computer science; it is the very foundation of the field. Its principles extend beyond computer science and have applications in various domains, including science, business, and technology. This course fosters analytical thinking, equipping students with problem-solving strategies for real-world challenges.</p>
-            </div>
-
-            <div class="course-item animate-fade-in">
-                <h3>What kind of data structures and algorithms have you studied?</h3>
-                <p>Exploring data structures is like embarking on a journey through an intricate family of concepts. Arrays and strings resemble neat, orderly blocks of memory, while linked lists reflect interconnected paths of web pages. Stacks and queues evoke scenarios like biscuit stacks or waiting lines, while trees and tries open up a world of hierarchical relationships and efficient searches.</p>
-            </div>
-
-            <div class="course-item animate-fade-in">
-                <h3>How do you connect the course with real-time applications?</h3>
-                <p>Algorithms permeate our lives, guiding us home through GPS or managing massive datasets in e-commerce. They take complex challenges and create elegant solutions, optimizing, protecting, and personalizing the technology we rely on every day.</p>
-            </div>
-        </div>
-        <img src="algorithms-visual.png" alt="Algorithms Visualization" class="responsive-image">
+    <!-- Main Content -->
+    <section class="content">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec accumsan eros, at ullamcorper justo. Integer fermentum purus ac nisi feugiat, in convallis arcu gravida.</p>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Chinmayi K B. All rights reserved.</p>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
 </body>
-</html
+</html>
