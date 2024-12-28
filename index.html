@@ -3,127 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Navigation Bar */
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: block;
-        }
-
-        nav ul li a:hover {
-            background-color: #575757;
-        }
-
-        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
         }
 
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
         header {
             text-align: center;
             padding: 2rem;
-            background-color: #f4f4f4;
+            background: #f4f4f4;
         }
 
         section {
+            text-align: center;
             padding: 2rem;
         }
 
-        h1, h2 {
-            color: #333;
-        }
-
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
+        <div><strong>My Portfolio</strong></div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#Chinmayi">Projects</a></li>
-            <li><a href="#Ananya">Skills</a></li>
-            <li><a href="#Ria">Contact</a></li>
-            <li><a href="#Sanjana">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Home Section -->
-    <header id="home">
-        <h1>Hello, I'm [Your Name] 👋</h1>
-        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my journey, projects, and skills as I navigate the tech world.</p>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I specialize in building efficient solutions and have a keen interest in web development, algorithms, and data structures.</p>
+    <!-- Main Section -->
+    <section>
+        <h2>Overview</h2>
+        <p>Check out the navigation bar to learn more about me, my work, and how to get in touch.</p>
     </section>
 
-    <section id="Chinmayi">
-        <h2>🛠️ Projects</h2>
-        <ul>
-            <li><strong>Project 1</strong>: A short description of your project1.</li>
-            <li><strong>Project 2</strong>: A short description of another project2.</li>
-        </ul>
-    </section>
-
-    <section id="Ananya">
-        <h2>🚀 Skills</h2>
-        <ul>
-            <li>C++, Python, JavaScript</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Web Development (React.js, Node.js)</li>
-        </ul>
-    </section>
-    
-    <section id="Ria">
-        <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
-        </ul>
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
-    </section>
-    
-    <section id="Sanjana">
-        <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
-        </ul>
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
