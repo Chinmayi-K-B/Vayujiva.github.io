@@ -114,24 +114,29 @@
         <pre>
 #include <iostream>
 #include <unordered_map>
+#include <string>
 using namespace std;
 
+// TrieNode class to represent each level of the Trie
 class TrieNode {
 public:
-    unordered_map<char, TrieNode*> children;
-    bool isEndOfSlot;
+    unordered_map<char, TrieNode*> children; // Map to hold children nodes
+    bool isEndOfSlot; // Flag to mark end of a valid slot
+    
     TrieNode() : isEndOfSlot(false) {}
 };
 
+// ParkingTrie class to manage parking slots using Trie
 class ParkingTrie {
-    TrieNode* root;
-    
+    TrieNode* root; // Root node of the trie
+
 public:
     ParkingTrie() {
         root = new TrieNode();
     }
-    
-    void insert(string slot) {
+
+    // Insert a parking slot in the Trie
+    void insert(const string& slot) {
         TrieNode* node = root;
         for (char ch : slot) {
             if (node->children.find(ch) == node->children.end()) {
@@ -141,8 +146,9 @@ public:
         }
         node->isEndOfSlot = true;
     }
-    
-    bool search(string slot) {
+
+    // Search for a parking slot in the Trie
+    bool search(const string& slot) const {
         TrieNode* node = root;
         for (char ch : slot) {
             if (node->children.find(ch) == node->children.end()) {
@@ -159,6 +165,7 @@ int main() {
     trie.insert("City1_LotA_Slot3");
     trie.insert("City1_LotB_Slot1");
     
+    // Checking availability of slots
     cout << "Is Slot City1_LotA_Slot3 available? " << (trie.search("City1_LotA_Slot3") ? "Yes" : "No") << endl;
     cout << "Is Slot City1_LotA_Slot4 available? " << (trie.search("City1_LotA_Slot4") ? "Yes" : "No") << endl;
     
@@ -177,25 +184,31 @@ int main() {
         <pre>
 #include <iostream>
 #include <queue>
+#include <string>
 using namespace std;
 
+// Structure to hold information about vehicles
 struct Vehicle {
     string licensePlate;
     int arrivalTime;
     
+    // Custom comparison for priority queue (longest waiting vehicle first)
     bool operator>(const Vehicle& v) const {
         return arrivalTime > v.arrivalTime;
     }
 };
 
+// Class to manage parking queue using priority queue
 class ParkingQueue {
-    priority_queue<Vehicle, vector<Vehicle>, greater<Vehicle>> queue;
+    priority_queue<Vehicle, vector<Vehicle>, greater<Vehicle>> queue; // Priority queue to manage vehicles
     
 public:
-    void addVehicle(string licensePlate, int arrivalTime) {
+    // Add vehicle to the queue
+    void addVehicle(const string& licensePlate, int arrivalTime) {
         queue.push({licensePlate, arrivalTime});
     }
-    
+
+    // Allocate slot to the vehicle at the front of the queue
     void allocateSlot() {
         if (!queue.empty()) {
             Vehicle v = queue.top();
@@ -212,6 +225,7 @@ int main() {
     pq.addVehicle("AB123CD", 2);
     pq.addVehicle("XY987ZT", 1);
     
+    // Allocating slots based on priority (arrival time)
     pq.allocateSlot(); // Should allocate to XY987ZT
     pq.allocateSlot(); // Should allocate to AB123CD
     
@@ -228,54 +242,4 @@ int main() {
         <p><strong>Functionality:</strong> A trie can efficiently store and retrieve the availability of EV charging slots based on location, type of station (e.g., Level 1, Level 2, or DC Fast Charging), and other factors.</p>
         <p><strong>Example Usage:</strong></p>
         <ul>
-            <li>Each node in the trie represents a level of detail (e.g., city > charging station > slot number).</li>
-            <li>Quick lookup for the nearest available charging station or slot, considering factors like station type and availability.</li>
-        </ul>
-
-        <pre>
-#include <iostream>
-#include <unordered_map>
-using namespace std;
-
-class EVChargingTrieNode {
-public:
-    unordered_map<char, EVChargingTrieNode*> children;
-    bool isEndOfSlot;
-    EVChargingTrieNode() : isEndOfSlot(false) {}
-};
-
-class EVChargingTrie {
-    EVChargingTrieNode* root;
-    
-public:
-    EVChargingTrie() {
-        root = new EVChargingTrieNode();
-    }
-    
-    void insert(string slot) {
-        EVChargingTrieNode* node = root;
-        for (char ch : slot) {
-            if (node->children.find(ch) == node->children.end()) {
-                node->children[ch] = new EVChargingTrieNode();
-            }
-            node = node->children[ch];
-        }
-        node->isEndOfSlot = true;
-    }
-    
-    bool search(string slot) {
-        EVChargingTrieNode* node = root;
-        for (char ch : slot) {
-            if (node->children.find(ch) == node->children.end()) {
-                return false;
-            }
-            node = node->children[ch];
-        }
-        return node->isEndOfSlot;
-    }
-};
-
-int main() {
-    EVChargingTrie trie;
-    trie.insert("City1_StationA_Slot3");
-   
+            <li>Each node in the trie represents a level of detail (e.g., city
