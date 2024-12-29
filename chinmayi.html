@@ -30,7 +30,6 @@
             margin: 0 20px;
             font-weight: 600;
             font-size: 1.1rem;
-            transition: color 0.3s;
         }
 
         nav a:hover {
@@ -40,10 +39,9 @@
         /* Hero Section */
         header {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 2rem;
             background: #D7C8B0; /* Light Coffee */
             color: white;
-            animation: fadeIn 2s ease-in;
         }
 
         header h1 {
@@ -61,7 +59,7 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
-        /* Section Styling */
+        /* Content Section */
         section {
             background-color: #F8F4E3; /* Pale Pastel Coffee */
             color: #5D4037; /* Medium Coffee Brown */
@@ -71,26 +69,13 @@
             margin: 30px auto;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         section h2, section h3 {
             color: #A87C55; /* Coffee Brown */
-            margin-bottom: 15px;
         }
 
-        section ul {
-            text-align: left;
-            margin: 20px auto;
-            display: inline-block;
-        }
-
-        /* Footer Styling */
+        /* Footer Section */
         footer {
             background-color: #3E2723; /* Dark Coffee */
             color: #F1E8D6; /* Pastel Coffee Beige */
@@ -99,7 +84,6 @@
             position: relative;
             bottom: 0;
             width: 100%;
-            font-size: 1rem;
         }
 
         footer p {
@@ -121,20 +105,10 @@
             }
         }
 
-        /* Hover Effects */
+        /* Hover Effect */
         .hover-effect:hover {
             transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            transition: transform 0.3s;
         }
 
         /* Highlight Class */
@@ -148,36 +122,141 @@
 
     <header>
         <h1>Course Reflections</h1>
-        <p>Explore the connection between algorithms and natural processes</p>
     </header>
 
-    <!-- Sections -->
     <section id="nature" class="hover-effect">
         <h3>1. What are the kinds of problems we see in nature? (iteration, recursion, backtracking)?</h3>
-        <p><span class="highlight">Nature provides numerous examples</span> that parallel the concepts of iteration, recursion, and backtracking in computational terms. The recurring cycle of seasons, which progresses and repeats predictably each year, is a clear representation of iteration...</p>
-        <h3>2. What is space and time efficiency? Why are they important?</h3>
-        <p><span class="highlight">Space Complexity</span> and <span class="highlight">Time Complexity</span> are crucial for assessing an algorithm's efficiency, enabling programmers to determine its suitability for specific applications...</p>
-        <h3>3. Takeaway from different design principles from chapter 2?</h3>
-        <p><span class="highlight">AVL trees</span> and <span class="highlight">Red-Black trees</span> taught me how maintaining balance in data structures is essential for efficient operations...</p>
-    </section>
+        <p><span class="highlight"></span> Nature provides numerous examples that parallel the concepts of iteration, recursion, and backtracking in computational terms. The recurring cycle of seasons, which progresses and repeats predictably each year, is a clear representation of iteration. Similarly, the growth pattern of cabbage leaves, where each layer forms upon the previous one in a structured sequence, embodies recursion—a process building upon itself. Ants foraging for food illustrate backtracking; they traverse paths in search of resources and, upon encountering obstacles or dead ends, retrace their steps to explore alternative routes. These examples showcase how fundamental algorithmic principles are intricately mirrored in natural processes, emphasizing the profound connection between computational logic and the patterns observed in the natural world.</p>
+
+        <h3>2. What is space and time efficiency? Why are they important? Explain the different classes of problems and orders of growth?</h3>
+        <p><span class="highlight"></span> 
+            <li>Space Complexity: Additional memory an algorithm requires during execution and Time Complexity: The duration it takes for an algorithm to complete its task. 
+            <li>These measures are crucial for assessing an algorithm's efficiency, enabling programmers to determine its suitability for specific applications. </li>
+            <li>The orders of growth of an algorithm describe how time or space requirements grow as the input size increases.</li>
+            <li><strong>O(1)</strong> -> Constant order of growth</li>
+            <li><strong>O(n)</strong> -> Linear order of growth</li>
+            <li><strong>O(log n)</strong> -> Logarithmic order of growth.</li>
+        </p>
+        <h3>3. Take away from different design principles from chapter 2?</h3>
+        <p><span class="highlight"></span> Studying different algorithms has helped me grasp their key principles and applications more clearly. For example, AVL trees and Red-Black trees taught me how maintaining balance in data structures is essential for efficient operations. Exploring graph traversal methods like DFS and BFS showed how different strategies can solve problems effectively—DFS being more exploratory and BFS taking a systematic approach. Learning sorting algorithms like Merge Sort, which divides and merges data, and Quick Sort, which strategically swaps elements, gave me a better understanding of how they work in practice. These concepts have provided me with a solid foundation in understanding algorithms and their practical uses.</p>
+        <h3>4. The hierarchical data and how different tree data structures solve and optimize over problem scenarios (tree, bst, avl, 2-3, red-black, heap, trie)</h3>
+        <p><span class="highlight"></span>Studying different algorithms has helped me grasp their key principles and applications more clearly. For example, AVL trees and Red-Black trees taught me how maintaining balance in data structures is essential for efficient operations. Exploring graph traversal methods like DFS and BFS showed how different strategies can solve problems effectively—DFS being more exploratory and BFS taking a systematic approach. Learning sorting algorithms like Merge Sort, which divides and merges data, and Quick Sort, which strategically swaps elements, gave me a better understanding of how they work in practice. These concepts have provided me with a solid foundation in understanding algorithms and their practical uses.</p>
+
+        <h3>5. The need for array query algorithms and their implications. Their applications and principles need to be discussed.</h3>
+        <p><span class="highlight"></span>Efficient array queries are crucial for managing large datasets with frequent updates. Lookup tables precompute and store results for fast range queries, while segment trees handle dynamic updates efficiently. A simpler alternative is the Binary Indexed Tree (BIT), which uses a clever bitwise approach for quick range operations.  
+        These tools have practical uses, like enabling price filters on shopping sites such as Amazon, where customers can search within specific price ranges. Similarly, financial platforms use range queries to analyze stock trends over chosen periods. These structures balance speed and simplicity, making them vital for modern data-driven applications.</p>
+
+        <h3>6. Differentiate between tree and graphs and their traversals. The applications of each.</h3>
+        <p><span class="highlight"></span>
+       Trees: A connected, acyclic graph with n nodes and n-1 edges. Always has a root node. Is always connected and has no cycles.<br>
+       Graphs: A collection of vertices connected by edges, which can be cyclic or disconnected. Does not have a specific root unless explicitly defined. Can be either connected or disconnected and may include cycles.<br>
+       Tree Traversals: Pre-order<br> In-order<br> Post-order<br> Examples: Heaps, Binary Search Trees (BST) for efficient search, insertion, and deletion.<br>
+       Graph Traversals: DFS (Depth-First Search), BFS (Breadth-First Search). Examples: Road navigation, social networks, communication networks.<br>
+        </p>
+
+        <h3>7. Deliberate on sorting and searching algorithms, the technique behind each and how they connect to the real world.</h3>
+        <p><span class="highlight"></span> Sorting algorithms arrange data in order (ascending/descending).  
+        1. Bubble Sort: Repeatedly compares and swaps adjacent elements.<br>  
+        2. Insertion Sort: Inserts elements into the sorted portion one by one.<br>
+        3. Selection Sort: Finds the smallest/largest element and places it in the sorted section.<br>
+        4. Merge Sort: Recursively splits and merges sorted halves.<br>
+        5. Quick Sort: Partitions the array around a pivot for sorting.<br>
+
+        Applications:  
+        - Database Management: Sorting for faster querying.  
+        - E-commerce: Arranging products by price, ratings, etc.  
+
+        Searching Algorithms: <br> 
+        - File Systems: Searching files in directories. <br> 
+        - Hash-Based Searches: Fast data retrieval using hash functions.<br></p>
+        <h2>8. Discuss the importance of graph algorithms with respect to spanning trees and shortest paths.</h2>
+        <p><span class="highlight"></span>Graph algorithms play a crucial role in solving problems related to traversal. To minimize traversal costs, algorithms like Kruskal’s and Prim’s are used to find the minimum spanning tree. These are commonly applied in areas such as laying cables, pipelines, and building networks. When the goal is to determine the shortest path, algorithms like Dijkstra and Floyd-Warshall come into play. These are vital for network routing, mapping, and other navigation tasks. By utilizing spanning trees and shortest path algorithms, efficiency is improved, and costs are reduced.</p>
+        <h2>9. Discuss the different studied algorithm design techniques</h2>
+        <p><span class="highlight"></span>
+        Different algorithms studied:
+        1. Backtracking: It involves exploring all possible solutions and pruning the ones that do not lead to a solution, learned with the example of the N-queens problem.<br>
+        2. Sorting Algorithms:<br>
+        i. Divide and conquer: Quick and Merge Sort<br>
+        ii. Comparison-Based: Selection Sort, Insertion Sort, Bubble Sort.<br>
+        3. Brute force: Solving a problem by trying all possible solutions one-by-one.<br>
+        4. String search algorithms:<br> i. Boyer-Moore<br> ii. Knuth-Morris-Pratt<br> iii. Rabin-Karp<br>
+        5. Shortest path algorithms:<br> i. Dijkstra's<br> ii. Floyd's<br> iii. Warshall's<br> v. Prim's<br>
+        </p>
 
     <header>
         <h1>Business Ideas</h1>
     </header>
 
-    <section id="nature" class="hover-effect">
+  <section id="nature" class="hover-effect">
         <h1>1. Smart Parking Systems</h1>
-        <p><strong>Problem:</strong> Urban congestion and inefficient parking utilization...</p>
-        <h3>Applications:</h3>
-        <h4>Parking Slot Availability using Trie</h4>
-        <p>Functionality: A trie efficiently stores and retrieves parking slots based on location...</p>
-        <h4>Dynamic Queue for Real-time Slot Allocation</h4>
-        <p>Functionality: A queue dynamically manages the order of vehicles waiting for parking slots...</p>
-    </section>
+            <p><strong>Problem:</strong> 
+<strong>Urban Congestion</strong>: Cities face increasing traffic congestion due to limited parking spaces, leading to wasted time, frustration, and higher pollution levels.<br>
+                
+<strong>Inefficient Parking Utilization</strong>: Traditional parking systems often lead to underutilization of available parking spaces and increased traffic as drivers circle the streets looking for parking.<br>
+                
+<strong>Environmental Impact</strong>: Time spent searching for parking contributes to unnecessary fuel consumption and carbon emissions.<br>
+                
+<strong>Resource Allocation</strong>: Local governments and businesses face challenges in efficiently managing parking resources.<br></p>
+        
+            <p><strong>Solution:</strong> Smart parking systems utilizing tries and dynamic queues to optimize parking availability and direct vehicles to open spots in real-time.</p>
+            <h2> Applications:</h2>
+            <h3>Parking Slot Availability using Trie</h3>
+            <p><strong>Functionality:</strong> A trie efficiently stores and retrieves parking slots based on location and type (e.g., compact, regular, or handicapped).</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                Each node in the trie represents a level of detail (e.g., city > parking lot > slot number).<br>
+                Quick lookup for the nearest available parking slot in a specific area.
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Smart Parking Trie Code</a> on GitHub</p>
 
-    <footer>
-        <p>&copy; 2024 Smart City Solutions</p>
-    </footer>
+            <h3>Dynamic Queue for Real-time Slot Allocation</h3>
+            <p><strong>Functionality:</strong> A queue dynamically manages the order of vehicles waiting for parking slots.</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                Vehicles are queued as they approach the parking area.<br>
+                As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Parking Queue Code</a> on GitHub</p>
+<section id="nature" class="hover-effect">
+            <h1>2. EV Charging Station Management</h1>
+            <p><strong>Problem:</strong> Efficient management of EV charging stations to support the growing adoption of electric vehicles.</p>
+            <p><strong>Solution:</strong> Smart management using tries and dynamic queues for real-time allocation and efficient utilization of charging slots.</p>
+            <h2> Applications:</h2>
+            <h3>EV Charging Slot Availability using Trie</h3>
+            <p><strong>Functionality:</strong> A trie efficiently stores and retrieves EV charging slots based on location, type, and availability.</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                Each node in the trie represents a level of detail (e.g., city > charging station > slot number).<br>
+                Quick lookup for the nearest available charging station or slot.
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Ev_charging_trie_code.cpp" target="_blank">EV Charging Trie Code</a> on GitHub</p>
 
+            <h3>Binary search tree for Real-time EV Slot Allocation</h3>
+            <p><strong>Functionality:</strong> 
+Insert Charging Slot: Add a new charging slot to the system (represented by a unique slotID).<br>
+                
+Allocate Slot to EV: Allocate a slot to an electric vehicle (EV) if the slot is available.<br>
+                
+Deallocate Slot: Once the EV finishes charging, the slot becomes available again.<br></p>
+        
+            <p><strong>Example Usage:</strong></p>
+                Vehicles are queued as they arrive at a charging station.<br>
+                As slots become available, the vehicle at the front of the queue is allocated a charging slot.
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/ev_charging_bst_code.cpp" target="_blank">EV Charging BST Code</a> on GitHub</p>
+        </section>
+       </section>
+        <h1>3. SDGs Alignment</h1>
+        <p><strong>Smart Parking systems - SDG 9: Industry, Innovation, and Infrastructure</strong>
+9.1.1: Proportion of the rural population who live within 2 km of an all-season road (related to infrastructure access, which can be improved by smart parking systems in urban areas).<br>
+9.c.1: Proportion of population covered by a mobile network, by technology (smart parking systems often rely on mobile apps and connectivity).<br></p>
+        <p>S<strong>EV Charging Station Management - SDG 7: Affordable and Clean Energy</strong>
+7.1.1: Proportion of population with access to electricity (critical for the operation of EV charging stations and ensuring that EV owners have reliable access to charging infrastructure).<br>
+7.2.1: Renewable energy share in the total final energy consumption (EV charging stations can integrate renewable energy sources, reducing carbon emissions).<br>
+7.b.1: Installed renewable energy-generating capacity in developing countries (supports the integration of renewable energy at EV charging stations, promoting sustainability).<br></p>
+
+        <footer>
+            <p>&copy; 2024 Smart City Solutions</p>
+        </footer>
+    </main>
 </body>
 </html>
