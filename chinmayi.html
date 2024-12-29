@@ -3,129 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithmic Patterns & Smart City Solutions</title>
+    <title>Algorithms and Nature & SDG Goal 11</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(90deg, #4caf50, #81c784);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        header h1 {
-            margin: 0;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        section {
-            padding: 2rem;
-            margin: 1rem auto;
-            max-width: 800px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: slideIn 1s ease-in-out;
-        }
-        section h2 {
-            text-align: center;
-            color: #4caf50;
-        }
-        section ul {
-            padding-left: 1.5rem;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #4caf50;
-            color: white;
-            margin-top: 2rem;
-        }
-        .highlight {
-            color: #4caf50;
-            font-weight: 600;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .hover-effect:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s;
-        }
-        nav {
-            background: #4caf50;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 1rem;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Algorithmic Patterns & Smart City Solutions</h1>
+        <h1>Algorithms, Nature, and SDG Goal 11</h1>
+        <p>Exploring the connections between natural processes, algorithmic concepts, and sustainable smart city solutions.</p>
     </header>
 
-    <nav>
-        <a href="#nature">Nature</a>
-        <a href="#smart-city">Smart City Solutions</a>
-    </nav>
+    <main>
+        <section id="natural-analogies">
+            <h2>Natural Analogies to Algorithmic Concepts</h2>
+            <ul>
+                <li><strong>Iteration in Nature:</strong> The recurring cycle of seasons exemplifies iteration, mirroring a loop in an algorithm that executes instructions repeatedly.</li>
+                <li><strong>Recursion in Nature:</strong> The growth pattern of cabbage leaves reflects recursion, with each layer building upon the previous, similar to a recursive function.</li>
+                <li><strong>Backtracking in Nature:</strong> Ants searching for food demonstrate backtracking, retreating to try alternative paths when unsuccessful.</li>
+            </ul>
+        </section>
 
-    <section id="nature" class="hover-effect">
-        <h2>Observing Algorithmic Patterns in Nature</h2>
-        <h3>Iteration in Nature</h3>
-        <p><span class="highlight">Example:</span> The recurring cycle of seasons is a perfect example of iteration. Like a loop in an algorithm, the progression from one season to the next happens repeatedly and predictably, much as a loop executes a set of instructions multiple times for different inputs.</p>
-        <h3>Recursion in Nature</h3>
-        <p><span class="highlight">Example:</span> The growth pattern of cabbage leaves, where new leaves form on top of older ones in layers, closely resembles recursion. Just like a recursive function that builds on smaller subproblems, each new layer of leaves is formed based on the previous ones, continuing the process until the plant reaches maturity.</p>
-        <h3>Backtracking in Nature</h3>
-        <p><span class="highlight">Example:</span> Ants searching for food provide a clear analogy for backtracking. Ants will explore various paths in search of food and, if unsuccessful, will backtrack to their nest to try a different route. This mirrors the backtracking approach in algorithms, where we explore possible solutions and retreat when a path doesn’t lead to a solution, as in the case of solving puzzles like the N-Queens problem.</p>
-    </section>
+        <section id="sdg-goal">
+            <h2>SDG Goal 11: Smart City Solutions</h2>
+            <ul>
+                <li><strong>Goal:</strong> Make cities and human settlements inclusive, safe, resilient, and sustainable.</li>
+                <li><strong>Target:</strong> Provide access to safe, affordable, accessible, and sustainable transport systems for all by 2030.</li>
+                <li><strong>Indicator:</strong> Proportion of population with convenient access to public transport, by sex, age, and persons with disabilities.</li>
+            </ul>
+        </section>
 
-    <section id="smart-city" class="hover-effect">
-        <h2>SDG Goal 11: Smart City Solutions</h2>
-        <h3>Indicator Information</h3>
-        <ul>
-            <li><span class="highlight">Goal:</span> Make cities and human settlements inclusive, safe, resilient, and sustainable.</li>
-            <li><span class="highlight">Target:</span> By 2030, provide access to safe, affordable, accessible, and sustainable transport systems for all, improving road safety, notably by expanding public transport.</li>
-            <li><span class="highlight">Indicator:</span> Proportion of population that has convenient access to public transport, by sex, age, and persons with disabilities.</li>
-        </ul>
+        <section id="smart-city-solutions">
+            <h2>Smart City Solutions: Identified Business Cases</h2>
+            <h3>1. Smart Parking Systems</h3>
+            <p><strong>Problem:</strong> Traffic congestion due to inefficient parking space management and lack of real-time availability information.</p>
+            <p><strong>Solution:</strong> Smart parking systems utilizing tries and dynamic queues to optimize parking availability and direct vehicles to open spots in real-time.</p>
 
-        <h3>Smart Parking Systems</h3>
-        <p><span class="highlight">Problem:</span> Traffic congestion due to inefficient parking space management and lack of real-time availability information.</p>
-        <p><span class="highlight">Solution:</span> Smart parking systems that utilize technologies such as tries and queues to optimize parking availability and direct vehicles to open spots in real-time.</p>
+            <h4>Algorithmic Applications:</h4>
+            <h5>Parking Slot Availability using Trie</h5>
+            <p><strong>Functionality:</strong> A trie efficiently stores and retrieves parking slots based on location and type (e.g., compact, regular, or handicapped).</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Each node in the trie represents a level of detail (e.g., city > parking lot > slot number).</li>
+                <li>Quick lookup for the nearest available parking slot in a specific area.</li>
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Smart Parking Trie Code</a> on GitHub</p>
 
-        <h4>Parking Slot Availability using Trie</h4>
-        <p><span class="highlight">Functionality:</span> A trie can store and retrieve available parking slots based on location and type (e.g., compact, regular, or handicapped) efficiently.</p>
-        <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Smart Parking Trie Code</a> on GitHub.</p>
+            <h5>Dynamic Queue for Real-time Slot Allocation</h5>
+            <p><strong>Functionality:</strong> A queue dynamically manages the order of vehicles waiting for parking slots.</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Vehicles are queued as they approach the parking area.</li>
+                <li>As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).</li>
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Parking Queue Code</a> on GitHub</p>
 
-        <h3>EV Charging Station Management</h3>
-        <p><span class="highlight">Problem:</span> Efficiently managing EV charging stations to support the growing adoption of EVs and ensure optimal usage of charging resources.</p>
+            <h3>2. EV Charging Station Management</h3>
+            <p><strong>Problem:</strong> Efficient management of EV charging stations to support the growing adoption of electric vehicles.</p>
+            <p><strong>Solution:</strong> Smart management using tries and dynamic queues for real-time allocation and efficient utilization of charging slots.</p>
 
-        <h4>Dynamic Queue for Real-time EV Slot Allocation</h4>
-        <p><span class="highlight">Functionality:</span> A queue manages the order of vehicles waiting for an EV charging station slot, ensuring fair and timely access to charging resources.</p>
-        <p>View the full <a href="https://github.com/yourusername/ev-charging-queue" target="_blank">EV Charging Queue Code</a> on GitHub.</p>
-    </section>
+            <h4>Algorithmic Applications:</h4>
+            <h5>EV Charging Slot Availability using Trie</h5>
+            <p><strong>Functionality:</strong> A trie efficiently stores and retrieves EV charging slots based on location, type, and availability.</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Each node in the trie represents a level of detail (e.g., city > charging station > slot number).</li>
+                <li>Quick lookup for the nearest available charging station or slot.</li>
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Ev_charging_trie_code.cpp" target="_blank">EV Charging Trie Code</a> on GitHub</p>
 
-    <footer>
-        <p>&copy; 2024 Algorithmic Patterns & Smart City Solutions</p>
-    </footer>
+            <h5>Dynamic Queue for Real-time EV Slot Allocation</h5>
+            <p><strong>Functionality:</strong> A queue manages the order of vehicles waiting for EV charging slots.</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Vehicles are queued as they arrive at a charging station.</li>
+                <li>As slots become available, the vehicle at the front of the queue is allocated a charging slot.</li>
+            </ul>
+            <p>View the full <a href="https://github.com/yourusername/ev-charging-queue" target="_blank">EV Charging Queue Code</a> on GitHub</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Algorithms, Nature, and SDG Goal 11: Smart City Solutions</p>
+        </footer>
+    </main>
 </body>
 </html>
