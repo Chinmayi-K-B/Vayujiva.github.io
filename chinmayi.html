@@ -119,10 +119,6 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#nature">Nature</a>
-        <a href="#business">Business Ideas</a>
-    </nav>
 
     <header>
         <h1>Course Reflections</h1>
@@ -162,7 +158,7 @@
         <p><span class="highlight"></span> Sorting algorithms arrange data in order (ascending/descending).  
         <li>1. Bubble Sort: Repeatedly compares and swaps adjacent elements.</li>  
         <li>2. Insertion Sort: Inserts elements into the sorted portion one by one.</li>
-        <li>3. Selection Sort: Finds the smallest/largest element and places it in the sorted section.  </li>
+        <li>3. Selection Sort: Finds the smallest/largest element and places it in the sorted section.</li>
         <li>4. Merge Sort: Recursively splits and merges sorted halves.  </li>
         <li>5. Quick Sort: Partitions the array around a pivot for sorting.  </li>
 
@@ -191,13 +187,86 @@
         <h1>Business Ideas</h1>
     </header>
 
-    <section id="business">
-        <h3>11. Discuss the importance of algorithms in Business Applications</h3>
-        <p><span class="highlight"></span> They drive the core functionalities of many systems in businesses, from e-commerce platforms to recommendation engines. Algorithms ensure the efficient processing of large datasets, enabling quick decisions, personalized experiences, and better predictions.</p>
-    </section>
+  <section id="nature" class="hover-effect">
+        <h2>1. Smart Parking Systems</h2>
+        </section>
+            <p><strong>Problem:</strong> 
+<strong>Urban Congestion</strong>: Cities face increasing traffic congestion due to limited parking spaces, leading to wasted time, frustration, and higher pollution levels.
+                
+<strong>Inefficient Parking Utilization</strong>: Traditional parking systems often lead to underutilization of available parking spaces and increased traffic as drivers circle the streets looking for parking.
+                
+<strong>Environmental Impact</strong>: Time spent searching for parking contributes to unnecessary fuel consumption and carbon emissions.
+                
+<strong>Resource Allocation</strong>: Local governments and businesses face challenges in efficiently managing parking resources.</p>
+        
+            <p><strong>Solution:</strong> Smart parking systems utilizing tries and dynamic queues to optimize parking availability and direct vehicles to open spots in real-time.</p>
+            <p><strong>Implementation strategy:</strong>
+<li>Phase 1: Pilot Program: Begin with a small-scale pilot project in a high-traffic area to test system functionality and gather feedback.</li>
+                
+<li>Phase 2: Full-Scale Rollout: Expand the system to include additional parking areas, integrating feedback from the pilot program to refine the system.</li>
+                
+<li>Phase 3: Continuous Improvement: Regular updates to the system based on user feedback, data analytics, and evolving technological advances.</li></p>
+            <h3> Applications:</h3>
+            <h4>Parking Slot Availability using Trie</h4>
+            <p><strong>Functionality:</strong> A trie efficiently stores and retrieves parking slots based on location and type (e.g., compact, regular, or handicapped).</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Each node in the trie represents a level of detail (e.g., city > parking lot > slot number).</li>
+                <li>Quick lookup for the nearest available parking slot in a specific area.</li>
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Smart Parking Trie Code</a> on GitHub</p>
 
-    <footer>
-        <p>&copy; 2024 Course Reflections</p>
-    </footer>
+            <h4>Dynamic Queue for Real-time Slot Allocation</h4>
+            <p><strong>Functionality:</strong> A queue dynamically manages the order of vehicles waiting for parking slots.</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Vehicles are queued as they approach the parking area.</li>
+                <li>As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).</li>
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Parking Queue Code</a> on GitHub</p>
+<section id="nature" class="hover-effect">
+            <h2>2. EV Charging Station Management</h2>
+        </section>
+            <p><strong>Problem:</strong> Efficient management of EV charging stations to support the growing adoption of electric vehicles.</p>
+            <p><strong>Solution:</strong> Smart management using tries and dynamic queues for real-time allocation and efficient utilization of charging slots.</p>
+            <p><strong>Implementation Strategy:</strong>
+<li>Phase 1: Site Selection and Installation: Identify high-traffic locations, install charging stations, and integrate the management system. Focus on high-demand areas like shopping centers, office parks, and highways.</li>
+                
+<li>Phase 2: Software and App Integration: Develop and deploy the cloud-based management platform and mobile apps for user access and management.</li>
+                
+<li>Phase 3: User Education and Marketing: Launch educational campaigns to raise awareness about EV charging and drive adoption of the network.</li>
+                
+<li>Phase 4: Expansion and Optimization: Monitor the performance of charging stations, expand the network based on demand, and continuously optimize pricing and operations.</li></p>
+            <h3> Applications:</h3>
+            <h4>EV Charging Slot Availability using Trie</h4>
+            <p><strong>Functionality:</strong> A trie efficiently stores and retrieves EV charging slots based on location, type, and availability.</p>
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Each node in the trie represents a level of detail (e.g., city > charging station > slot number).</li>
+                <li>Quick lookup for the nearest available charging station or slot.</li>
+            </ul>
+            <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Ev_charging_trie_code.cpp" target="_blank">EV Charging Trie Code</a> on GitHub</p>
+
+            <h4>Binary search tree for Real-time EV Slot Allocation</h4>
+            <p><strong>Functionality:</strong> 
+<li>Insert Charging Slot: Add a new charging slot to the system (represented by a unique slotID).</li>
+                
+<li>Allocate Slot to EV: Allocate a slot to an electric vehicle (EV) if the slot is available.</li>
+                
+<li>Deallocate Slot: Once the EV finishes charging, the slot becomes available again.</li></p>
+        
+            <p><strong>Example Usage:</strong></p>
+            <ul>
+                <li>Vehicles are queued as they arrive at a charging station.</li>
+                <li>As slots become available, the vehicle at the front of the queue is allocated a charging slot.</li>
+            </ul>
+            <p>View the full <a href="https://github.com/yourusername/ev-charging-queue" target="_blank">EV Charging Queue Code</a> on GitHub</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Smart City Solutions</p>
+        </footer>
+    </main>
 </body>
 </html>
+    
