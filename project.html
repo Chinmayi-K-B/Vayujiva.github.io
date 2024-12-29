@@ -13,16 +13,18 @@
             padding: 0;
             background-color: #F1E8D6; /* Pastel Coffee Beige */
             color: #3E2723; /* Dark Brown */
+            transition: background-color 0.5s ease-in-out;
         }
 
         /* Navigation Bar */
         nav {
             background-color: #A87C55; /* Coffee Brown */
-            padding: 15px;
+            padding: 15px 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
@@ -31,6 +33,9 @@
             margin: 0 20px;
             font-weight: 600;
             font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
         }
 
         nav a:hover {
@@ -40,13 +45,15 @@
         /* Header Section */
         header {
             text-align: center;
-            padding: 2rem;
+            padding: 4rem 2rem;
             background: #D7C8B0; /* Light Coffee */
             color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
         }
 
         header h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 600;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -54,8 +61,9 @@
 
         header p {
             font-size: 1.5rem;
-            max-width: 600px;
-            margin-bottom: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         /* Content Section */
@@ -68,41 +76,63 @@
             margin: 30px auto;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
-        section h2, section h3 {
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        section h2 {
             color: #A87C55; /* Coffee Brown */
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        section h3 {
+            color: #3E2723;
+            font-size: 1.2rem;
+            font-weight: 400;
         }
 
         .image-section img {
             max-width: 100%;
             border-radius: 10px;
             margin-top: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
         }
 
         .button-link {
             display: inline-block;
             background-color: #A87C55; /* Coffee Brown */
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 25px;
             text-decoration: none;
-            margin-top: 15px;
+            margin-top: 20px;
             font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .button-link:hover {
             background-color: #D7C8B0; /* Light Coffee */
             color: #3E2723; /* Dark Brown */
+            transform: translateY(-5px);
         }
 
         ul {
             list-style-type: disc;
             padding-left: 20px;
+            text-align: left;
         }
 
         ul li {
             margin: 10px 0;
+            font-size: 1.1rem;
         }
 
         /* Footer Section */
@@ -120,6 +150,28 @@
             margin: 0;
         }
 
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #A87C55;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
@@ -130,15 +182,29 @@
                 padding: 20px;
             }
 
+            .button-link {
+                padding: 10px 20px;
+            }
+
             nav {
                 padding: 10px;
             }
+
+            table th, table td {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
-     <nav>
+    <nav>
         <ul style="list-style: none; display: flex; justify-content: center; padding: 0; margin: 0;">
             <li style="margin: 0 1rem;"><a href="index.html">Home</a></li>
             <li style="margin: 0 1rem;"><a href="project.html">Project</a></li>
@@ -162,7 +228,7 @@
         <section class="image-section">
             <h2>City Plan</h2>
             <p>Take a look at our innovative city layout designed to maximize sustainability and efficiency.</p>
-            <img src=""C:\Users\hp\Downloads\WhatsApp Image 2024-12-21 at 10.19.34.jpeg"" alt="City Plan">
+            <img src="path_to_image.jpeg" alt="City Plan">
         </section>
 
         <!-- Section 2: Description PDF -->
@@ -173,95 +239,94 @@
         </section>
 
         <!-- Section 3: Problem Statement -->
-       <section class="problem-section">
-    <h2>Project Description: Vayujiva</h2>
-    <p>
-        <strong>Vayujiva</strong> is a visionary initiative aimed at creating a sustainable and futuristic smart city. 
-        Built on eco-friendly principles, it emphasizes decentralization, resource efficiency, and community well-being, 
-        offering innovative and inclusive urban solutions.
-    </p>
+        <section class="problem-section">
+            <h2>Project Description: Vayujiva</h2>
+            <p>
+                <strong>Vayujiva</strong> is a visionary initiative aimed at creating a sustainable and futuristic smart city. 
+                Built on eco-friendly principles, it emphasizes decentralization, resource efficiency, and community well-being, 
+                offering innovative and inclusive urban solutions.
+            </p>
 
-    <p><strong>Key Features:</strong></p>
-    <ul>
-        <p><strong>Decentralized Development:</strong> Balanced distribution of facilities, ensuring equitable focus on all city regions.<br>
-        <strong>Smart Technology Integration:</strong> Advanced solutions for energy management, waste reduction, and city-wide connectivity.<br>
-        <strong>Eco-Conscious Infrastructure:</strong> Emphasis on renewable energy, sustainable construction, and expansive green spaces.<br>
-        <strong>People-Centric Design:</strong> Inclusive spaces for healthcare, education, and recreation, fostering social harmony.</p>
-    </ul>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li><strong>Decentralized Development:</strong> Balanced distribution of facilities, ensuring equitable focus on all city regions.</li>
+                <li><strong>Smart Technology Integration:</strong> Advanced solutions for energy management, waste reduction, and city-wide connectivity.</li>
+                <li><strong>Eco-Conscious Infrastructure:</strong> Emphasis on renewable energy, sustainable construction, and expansive green spaces.</li>
+                <li><strong>People-Centric Design:</strong> Inclusive spaces for healthcare, education, and recreation, fostering social harmony.</li>
+            </ul>
 
-    <p>
-        Vayujiva tackles critical challenges like overpopulation, resource depletion, and environmental sustainability, 
-        offering a blueprint for smarter, greener cities of the future.
-    </p>
-           <h2>Problem Statement</h2>
-    <p>
-        Urban mobility is plagued by challenges such as traffic congestion, lack of parking, and slow emergency response. 
-        A smart system that efficiently manages traffic, parking, and emergencies can greatly improve urban living, 
-        reducing delays and enhancing efficiency.
-    </p>
-</section>
+            <p>
+                Vayujiva tackles critical challenges like overpopulation, resource depletion, and environmental sustainability, 
+                offering a blueprint for smarter, greener cities of the future.
+            </p>
+            <h2>Problem Statement</h2>
+            <p>
+                Urban mobility is plagued by challenges such as traffic congestion, lack of parking, and slow emergency response. 
+                A smart system that efficiently manages traffic, parking, and emergencies can greatly improve urban living, 
+                reducing delays and enhancing efficiency.
+            </p>
+        </section>
 
         <!-- Section 4: Business Cases -->
-        <!-- Section 4: Business Cases -->
-<section class="business-section">
-    <h2>Business Cases Identified</h2>
-    <p>We have identified key business opportunities within the project:</p>
-    <table border="1" cellspacing="0" cellpadding="5">
-        <thead>
-            <tr>
-                <th>SL NO</th>
-                <th>Business Case Identified</th>
-                <th>Description</th>
-                <th>Owner</th>
-                <th>Problem Tools</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Real-time Traffic Monitoring</td>
-                <td>Collect, process, and store traffic data in real-time using IoT devices and sensors.</td>
-                <td>Ananya B P</td>
-                <td>Arrays, Hashing, Sparse Table</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Citizen Feedback Processing</td>
-                <td>Collect, analyze, and act on citizen feedback regarding traffic issues.</td>
-                <td>Ria</td>
-                <td>Brute Force String Search, Rabin-Karp, Lookup Table</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Smart Traffic Signal Control</td>
-                <td>Dynamically adjust signal timings based on traffic flow and congestion.</td>
-                <td>Sanjana</td>
-                <td>Heap, AVL Tree, BFS, Binary Search Tree</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Smart Parking Systems</td>
-                <td>Use Trie to store and search for parking space availability in real time, providing instant updates.</td>
-                <td>Chinmayi K B</td>
-                <td>Trie, Queue</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Emergency Vehicle Routing</td>
-                <td>Implement a 2-3 Tree to handle route optimization for emergency vehicles, ensuring minimal delay.</td>
-                <td>Ria and Sanjana</td>
-                <td>2-3 Tree, Dijkstra’s Algorithm</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>EV Charging Station Management</td>
-                <td>Locate and manage EV charging stations in the city.</td>
-                <td>Ananya and Chinmayi</td>
-                <td>Binary Search Tree, Trie, Arrays</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+        <section class="business-section">
+            <h2>Business Cases Identified</h2>
+            <p>We have identified key business opportunities within the project:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SL NO</th>
+                        <th>Business Case Identified</th>
+                        <th>Description</th>
+                        <th>Owner</th>
+                        <th>Problem Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Real-time Traffic Monitoring</td>
+                        <td>Collect, process, and store traffic data in real-time using IoT devices and sensors.</td>
+                        <td>Ananya B P</td>
+                        <td>Arrays, Hashing, Sparse Table</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Citizen Feedback Processing</td>
+                        <td>Collect, analyze, and act on citizen feedback regarding traffic issues.</td>
+                        <td>Ria</td>
+                        <td>Brute Force String Search, Rabin-Karp, Lookup Table</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Smart Traffic Signal Control</td>
+                        <td>Dynamically adjust signal timings based on traffic flow and congestion.</td>
+                        <td>Sanjana</td>
+                        <td>Heap, AVL Tree, BFS, Binary Search Tree</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Smart Parking Systems</td>
+                        <td>Use Trie to store and search for parking space availability in real time, providing instant updates.</td>
+                        <td>Chinmayi K B</td>
+                        <td>Trie, Queue</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Emergency Vehicle Routing</td>
+                        <td>Implement a 2-3 Tree to handle route optimization for emergency vehicles, ensuring minimal delay.</td>
+                        <td>Ria and Sanjana</td>
+                        <td>2-3 Tree, Dijkstra’s Algorithm</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>EV Charging Station Management</td>
+                        <td>Locate and manage EV charging stations in the city.</td>
+                        <td>Ananya and Chinmayi</td>
+                        <td>Binary Search Tree, Trie, Arrays</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
     </main>
 
