@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vayujiva - Smart City Vision</title>
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
@@ -37,27 +38,21 @@
         }
 
         /* Hero Section */
-        .hero {
-            position: relative;
-            background-color: #D7C8B0; /* Light Coffee */
-            color: white;
+        header {
             text-align: center;
-            height: 100vh;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 2rem;
+            background: #D7C8B0; /* Light Coffee */
+            color: white;
         }
 
-        .hero h1 {
+        header h1 {
             font-size: 4rem;
             font-weight: 600;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding subtle shadow */
         }
 
-        .hero p {
+        header p {
             font-size: 1.5rem;
             max-width: 600px;
             margin-bottom: 30px;
@@ -65,36 +60,8 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
-        .hero button {
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            background-color: #A87C55; /* Coffee Brown */
-            color: #FFFFFF;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            z-index: 2;
-        }
-
-        .hero button:hover {
-            background-color: #6F4F37; /* Rich Coffee */
-        }
-
-        /* Popup Background Behind Title */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.4); /* Light translucent white background */
-            z-index: 1;
-        }
-
         /* Content Section */
-        main {
+        section {
             background-color: #F8F4E3; /* Pale Pastel Coffee */
             color: #5D4037; /* Medium Coffee Brown */
             padding: 40px 20px;
@@ -105,20 +72,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        main h2, main h3 {
-            color: #A87C55; /* Coffee Brown */
-        }
-
-        .content-box {
-            background-color: #F1E8D6; /* Pastel Coffee Beige */
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: #3E2723;
-        }
-
-        .content-box h2, .content-box h3 {
+        section h2, section h3 {
             color: #A87C55; /* Coffee Brown */
         }
 
@@ -137,51 +91,13 @@
             margin: 0;
         }
 
-        /* Popup Box Styling */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .popup-content {
-            background-color: #F1E8D6; /* Pastel Coffee Beige */
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            color: #3E2723;
-            width: 80%;
-            text-align: center;
-        }
-
-        .popup button {
-            background-color: #A87C55;
-            border: none;
-            color: white;
-            padding: 15px 25px;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .popup button:hover {
-            background-color: #6F4F37;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
+            header h1 {
                 font-size: 2.5rem;
             }
 
-            main {
+            section {
                 padding: 20px;
             }
 
@@ -192,75 +108,41 @@
     </style>
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#project">Project</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <div><strong>CITY DESIGN</strong></div>
+        <ul style="list-style: none; display: flex; justify-content: center; padding: 0; margin: 0;">
+            <li style="margin: 0 1rem;"><a href="index.html">Home</a></li>
+            <li style="margin: 0 1rem;"><a href="project.html">Project</a></li>
+            <li style="margin: 0 1rem;"><a href="chinmayi.html">Chinmayi</a></li>
+            <li style="margin: 0 1rem;"><a href="ananya.html">Ananya</a></li>
+            <li style="margin: 0 1rem;"><a href="ria.html">Ria</a></li>
+            <li style="margin: 0 1rem;"><a href="sanjana.html">Sanjana</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Vayujiva</h1>
-        <p>Explore our vision of a smart, sustainable city designed for the future.</p>
-        <button id="showPopup">Learn More</button>
+    <!-- Header Section -->
+    <header>
+        <h1>Introduction</h1>
+        <p>We were given the opportunity to design a smart city based off our imagination within 1500 sq m of barren land. Our city is decentralized so that we could provide better facilities and focus on each part of our city while giving every part equal attention.</p>
+    </header>
+
+    <!-- Main Section -->
+    <section>
+        <h2>About the course</h2>
+        <h3>What is the course about?</h3>
+        <p>Design and Analysis of Algorithms (DAA) is not just a branch of computer science; it is the very foundation of the field. Its principles extend beyond computer science and have applications in various domains, including science, business, and technology. This course focuses on recognizing the inherent patterns found in nature, as many natural processes inspire computational algorithms, and vice versa. It fosters analytical thinking, equipping students with problem-solving strategies applicable to a wide range of real-world challenges.</p>
+        
+        <h3>What kind of data structures and algorithms have you studied?</h3>
+        <p>Exploring data structures is like embarking on a journey through an intricate family of concepts. Arrays and strings resemble neat, orderly blocks of memory, while linked lists reflect the interconnected paths of web pages. Stacks and queues evoke familiar scenarios—stacks of biscuits or people waiting in line. Trees and tries open up a world of hierarchical relationships and efficient searches. Finally, skip lists, inspired by the randomness of coin tosses, introduce an element of chance while maintaining precision and speed.</p>
+
+        <h3>How do you connect the course with real-time applications?</h3>
+        <p>We are both aware and oblivious to the algorithms that permeate our lives, much like the omnipresent air we breathe. Dijkstra’s Algorithm guides us home through GPS, ensuring the quickest route, while sorting algorithms manage massive datasets in e-commerce platforms. These algorithms take complex challenges and carve them into elegant solutions, quietly enhancing our daily technological interactions and making our digital experiences smoother and more intuitive. They are the invisible hands that optimize, protect, and personalize the technology we rely on every day.</p>
     </section>
 
-    <!-- About the Course Section -->
-    <section id="about">
-        <main>
-            <div class="content-box">
-                <h2>About the Course</h2>
-                <h3>What is this course about?</h3>
-                <p>The Design and Analysis of Algorithms (DAA) course explores how algorithms and data structures shape the core of computer science and beyond. This course connects theory to practice, helping students solve complex problems in areas like business, science, and technology. Students will learn how nature-inspired processes influence algorithm design, sharpening analytical thinking and equipping them with tools for creative problem-solving.</p>
-            </div>
-        </main>
-    </section>
-
-    <!-- About the Project Section -->
-    <section id="project">
-        <main>
-            <div class="content-box">
-                <h2>About Our Project</h2>
-                <h3>Our Vision for the Future</h3>
-                <p>Vayujiva is a visionary smart city designed to be self-sustaining, environmentally conscious, and technologically advanced. Our project focuses on creating a city where infrastructure integrates renewable energy, efficient transportation, and green spaces. The design emphasizes sustainability and user-friendly urban planning to meet the needs of future generations. With our innovative approach to city planning, we aim to build a city that is a model for future urban living.</p>
-            </div>
-        </main>
-    </section>
-
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Vayujiva. All rights reserved.</p>
+        <p>&copy; 2024 Chinmayi K B. All rights reserved.</p>
     </footer>
-
-    <!-- Popup Section -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h3>Welcome to Vayujiva!</h3>
-            <p>Our project focuses on designing a self-sustaining, technologically advanced city that respects the environment. Join us in exploring a smarter way of living!</p>
-            <button id="closePopup">Close</button>
-        </div>
-    </div>
-
-    <script>
-        // Display popup on button click
-        const showPopupButton = document.getElementById('showPopup');
-        const popup = document.getElementById('popup');
-        const closePopupButton = document.getElementById('closePopup');
-
-        showPopupButton.addEventListener('click', function() {
-            popup.style.display = 'flex';
-        });
-
-        closePopupButton.addEventListener('click', function() {
-            popup.style.display = 'none';
-        });
-
-        // Set the current year in the footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
