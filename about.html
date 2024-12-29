@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* General Styles */
         body {
@@ -14,6 +15,7 @@
             padding: 0;
             color: #3E2723; /* Dark Brown */
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Navigation Bar */
@@ -46,6 +48,8 @@
             padding: 3rem 20px;
             background: linear-gradient(135deg, #A87C55, #D7C8B0); /* Gradient background */
             color: white;
+            position: relative;
+            z-index: 1;
         }
 
         header h1 {
@@ -53,6 +57,7 @@
             font-weight: 600;
             margin-bottom: 20px;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-out;
         }
 
         header h4 {
@@ -60,6 +65,13 @@
             max-width: 700px;
             margin: 0 auto;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 3s ease-out 0.5s;
+        }
+
+        /* Typing Animation for Header */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         /* Team Section */
@@ -69,6 +81,7 @@
             justify-content: space-around;
             padding: 40px 20px;
             gap: 30px;
+            animation: fadeIn 3s ease-out 1s;
         }
 
         .team-member {
@@ -79,11 +92,34 @@
             text-align: center;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
         }
 
+        /* Hover Flip Effect */
         .team-member:hover {
-            transform: translateY(-10px);
+            transform: rotateY(180deg);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member .front, .team-member .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .team-member .back {
+            background-color: #D7C8B0; /* Light Coffee */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+            padding: 15px;
         }
 
         .team-member img {
@@ -126,6 +162,11 @@
         .skill:hover {
             background-color: #A87C55;
             color: white;
+        }
+
+        /* Skill Icons */
+        .skill i {
+            margin-right: 5px;
         }
 
         /* Footer Section */
@@ -212,61 +253,78 @@
     <div class="team-container">
         <!-- Team Member 1 -->
         <div class="team-member">
-            <img src="member1.jpg" alt="Chinmayi K B">
-            <h3>Chinmayi K B</h3>
-            <p>Roll no - 412</p>
-            <p>USN - 01FE23BCS080</p>
-            <div class="skills">
-                <div class="skill">C and C++</div>
-                <div class="skill">Python</div>
-                <div class="skill">SQL</div>
-                <div class="skill">Web Development (HTML & CSS)</div>
+            <div class="front">
+                <img src="member1.jpg" alt="Chinmayi K B">
+                <h3>Chinmayi K B</h3>
+                <p>Roll no - 412</p>
+                <p>USN - 01FE23BCS080</p>
+            </div>
+            <div class="back">
+                <div class="skills">
+                    <div class="skill"><i class="fab fa-cuttlefish"></i>C and C++</div>
+                    <div class="skill"><i class="fab fa-python"></i>Python</div>
+                    <div class="skill"><i class="fas fa-database"></i>SQL</div>
+                    <div class="skill"><i class="fab fa-html5"></i>Web Development</div>
+                </div>
             </div>
         </div>
 
         <!-- Team Member 2 -->
         <div class="team-member">
-            <img src="member2.jpg" alt="Ananya B Pattanashetty">
-            <h3>Ananya B Pattanashetty</h3>
-            <p>Roll no - 406</p>
-            <p>USN - 01FE23BCS055</p>
-            <div class="skills">
-                <div class="skill">C and C++</div>
-                <div class="skill">SQL</div>
-                <div class="skill">Web Development (HTML & CSS)</div>
+            <div class="front">
+                <img src="member2.jpg" alt="Ananya B Pattanashetty">
+                <h3>Ananya B Pattanashetty</h3>
+                <p>Roll no - 406</p>
+                <p>USN - 01FE23BCS055</p>
+            </div>
+            <div class="back">
+                <div class="skills">
+                    <div class="skill"><i class="fab fa-cuttlefish"></i>C and C++</div>
+                    <div class="skill"><i class="fas fa-database"></i>SQL</div>
+                    <div class="skill"><i class="fab fa-html5"></i>Web Development</div>
+                </div>
             </div>
         </div>
 
         <!-- Team Member 3 -->
         <div class="team-member">
-            <img src="member3.jpg" alt="Ria Javalgi">
-            <h3>Ria Javalgi</h3>
-            <p>Roll no - 408</p>
-            <p>USN - 01FE23BCS</p>
-            <div class="skills">
-                <div class="skill">C and C++</div>
-                <div class="skill">SQL</div>
-                <div class="skill">Web Development (HTML & CSS)</div>
+            <div class="front">
+                <img src="member3.jpg" alt="Ria Javalgi">
+                <h3>Ria Javalgi</h3>
+                <p>Roll no - 408</p>
+                <p>USN - 01FE23BCS</p>
+            </div>
+            <div class="back">
+                <div class="skills">
+                    <div class="skill"><i class="fab fa-cuttlefish"></i>C and C++</div>
+                    <div class="skill"><i class="fas fa-database"></i>SQL</div>
+                    <div class="skill"><i class="fab fa-html5"></i>Web Development</div>
+                </div>
             </div>
         </div>
 
         <!-- Team Member 4 -->
         <div class="team-member">
-            <img src="member4.jpg" alt="Sanjana S">
-            <h3>Sanjana S</h3>
-            <p>Roll no - 407</p>
-            <p>USN - 01FE23BCS</p>
-            <div class="skills">
-                <div class="skill">C and C++</div>
-                <div class="skill">SQL</div>
-                <div class="skill">Web Development (HTML & CSS)</div>
+            <div class="front">
+                <img src="member4.jpg" alt="Sanjana S">
+                <h3>Sanjana S</h3>
+                <p>Roll no - 407</p>
+                <p>USN - 01FE23BCS</p>
+            </div>
+            <div class="back">
+                <div class="skills">
+                    <div class="skill"><i class="fab fa-cuttlefish"></i>C and C++</div>
+                    <div class="skill"><i class="fas fa-database"></i>SQL</div>
+                    <div class="skill"><i class="fab fa-html5"></i>Web Development</div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 VAYUJIVA. All rights reserved.</p>
+        <p>&copy; 2024 VAYUJIVA Team</p>
     </footer>
+
 </body>
 </html>
