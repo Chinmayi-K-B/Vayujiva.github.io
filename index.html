@@ -3,132 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Vayujiva - Home</title>
     <style>
-        /* Enable Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #F8F0E3; /* Light Pastel Beige */
+            background-color: #F5EFE0; /* Light Coffee Cream */
+            color: #2E2B2A; /* Dark Espresso */
             margin: 0;
             padding: 0;
-            color: #333333; /* Dark Gray */
-        }
-        
-        /* Navigation Bar */
-        nav {
-            background-color: #A3BFFA; /* Pastel Blue */
-            padding: 20px 30px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        nav a {
-            color: #ffffff; /* White */
-            text-decoration: none;
-            margin: 0 25px;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-        
-        nav a:hover {
-            color: #F6A9B8; /* Pastel Pink */
-        }
-        
-        /* Header */
-        header {
-            background-color: #A3BFFA; /* Pastel Blue */
-            text-align: center;
-            padding: 50px 20px;
-            color: #333333; /* Dark Gray */
-            font-size: 3rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Main Content */
-        main {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 40px 20px;
-            background-color: #ffffff; /* White */
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1, h2 {
-            color: #A3BFFA; /* Pastel Blue */
-            margin-bottom: 20px;
-        }
-        
-        h3 {
-            color: #333333; /* Dark Gray */
-            line-height: 1.8;
-            font-size: 1.1rem;
+            box-sizing: border-box;
         }
 
-        .content-box {
-            background-color: #ffffff; /* White */
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            border-left: 5px solid #F6A9B8; /* Pastel Pink */
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        /* Navigation Bar */
+        nav {
+            background-color: #6F4F37; /* Rich Coffee */
+            padding: 20px 50px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
-        
+
+        nav a {
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #D5B89B; /* Latte Beige */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?coffee');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #A87C55; /* Cappuccino Brown */
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #6F4F37; /* Rich Coffee */
+        }
+
+        /* Main Content */
+        main {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #6F4F37; /* Rich Coffee */
+            margin-bottom: 20px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border: 1px solid #D5B89B; /* Latte Beige */
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: #6F4F37; /* Rich Coffee */
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #2E2B2A; /* Dark Espresso */
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
         /* Footer */
         footer {
-            background-color: #A3BFFA; /* Pastel Blue */
-            color: #ffffff; /* White */
+            background-color: #6F4F37; /* Rich Coffee */
+            color: #FFFFFF;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             position: relative;
             bottom: 0;
             width: 100%;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         footer p {
             margin: 0;
+            font-size: 1rem;
         }
-        
-        /* Additional Styles */
-        a {
-            color: #F6A9B8; /* Pastel Pink */
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-            color: #333333; /* Dark Gray */
-        }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
                 padding: 15px 20px;
             }
 
-            nav a {
-                display: block;
-                margin: 15px 0;
+            .hero h1 {
+                font-size: 3rem;
             }
 
-            header {
-                font-size: 2.2rem;
+            .hero p {
+                font-size: 1.2rem;
             }
 
-            main {
-                padding: 20px;
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .section {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav>
         <a href="home.html">Home</a>
@@ -139,41 +181,36 @@
         <a href="sanjana.html">Sanjana</a>
     </nav>
 
-    <!-- Header Section -->
-    <header>
-        <h1><b><strong>Vayujiva</strong></b></h1>
-    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Vayujiva</h1>
+        <p>Explore our vision of a smart city that combines technology with sustainability. Discover the future of urban living.</p>
+        <button>Explore Now</button>
+    </section>
 
     <!-- Main Content -->
     <main>
-        <div class="content-box">
-            <h2>About Our Project</h2>
-            <h3>We had the opportunity to conceptualize and design a futuristic smart city on a 1500 sq m plot of barren land. Our vision centered on creating a self-sustaining, interconnected urban ecosystem that balances modern infrastructure with environmental consciousness. We focused on integrating renewable energy, efficient public transportation, and accessible facilities for all sectors. The process involved tackling challenges like sustainable resource management, optimal land utilization, and addressing diverse population needs. This project reflects our innovative approach to urban planning, combining technology, functionality, and sustainability to build a city of the future.</h3>
-        </div>
-
-        <h1>About the course</h1>
-
-        <div class="content-box">
-            <h2>What is the course about?</h2>
-            <h3>Design and Analysis of Algorithms (DAA) isn’t just a part of computer science—it’s at the heart of it. What’s fascinating is how its principles reach beyond computers, shaping areas like science, business, and technology. This course dives into the patterns we see in nature, showing how natural processes and algorithms often inspire each other. It’s all about sharpening your analytical thinking and giving you practical tools to tackle real-world problems in creative ways.</h3>
-        </div>
-
-        <div class="content-box">
-            <h2>What kind of data structures and algorithms have you studied?</h2>
-            <h3>Exploring data structures is like stepping into a world full of familiar and fascinating ideas. Arrays and strings feel like neat, organized rows of information, while linked lists remind you of the way web pages connect to each other. Stacks and queues bring to mind everyday things, like stacking plates or waiting in line. Trees and tries make you think of family trees or maps that help you search quickly and efficiently. Graphs, on the other hand, are like roadmaps or social networks, showing how different points are connected and helping you find the shortest path or strongest link. And then there are skip lists, which add a touch of randomness—like flipping a coin—but still manage to stay fast and reliable.</h3>
-        </div>
-
-        <div class="content-box">
-            <h2>How do you connect the course with real time applications?</h2>
-            <h3>Algorithms are everywhere around us, even if we don’t always notice them—like the air we breathe. They help us get home faster by finding the quickest route on GPS, thanks to Dijkstra’s Algorithm, and sort through endless products on e-commerce sites to show us exactly what we’re looking for. These behind-the-scenes problem-solvers take complicated tasks and turn them into simple, seamless experiences. They’re the invisible helpers making our technology smarter, safer, and more personal every single day.</h3>
+        <h2>Our Vision</h2>
+        <div class="section">
+            <div class="card">
+                <h3>Innovative Design</h3>
+                <p>Our smart city project integrates renewable energy, efficient transportation, and modern infrastructure for a sustainable future.</p>
+            </div>
+            <div class="card">
+                <h3>Data Structures & Algorithms</h3>
+                <p>From trees to graphs, discover how algorithms help us solve real-world problems efficiently and effectively.</p>
+            </div>
+            <div class="card">
+                <h3>Real-World Applications</h3>
+                <p>Learn how algorithms shape technology, from faster travel routes to personalized shopping experiences.</p>
+            </div>
         </div>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Vayujiva. All rights reserved.</p>
+        <p>&copy; 2024 Vayujiva. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
