@@ -88,12 +88,13 @@
         <h2>1. What are the kinds of problems we see in nature? (iteration, recursion, backtracking)?</h2>
         <p><span class="highlight"></span> Nature provides numerous examples that parallel the concepts of iteration, recursion, and backtracking in computational terms. The recurring cycle of seasons, which progresses and repeats predictably each year, is a clear representation of iteration. Similarly, the growth pattern of cabbage leaves, where each layer forms upon the previous one in a structured sequence, embodies recursion—a process building upon itself. Ants foraging for food illustrate backtracking; they traverse paths in search of resources and, upon encountering obstacles or dead ends, retrace their steps to explore alternative routes. These examples showcase how fundamental algorithmic principles are intricately mirrored in natural processes, emphasizing the profound connection between computational logic and the patterns observed in the natural world.</p>
         <h2>2. What is space and time efficiency? Why are they important? Explain the different classes of problems and orders of growth?</h2>
-        <p><span class="highlight"></span> Space Complexity : additional memory an algorithm requires during execution 
-            Time Complexity: the duration it takes for an algorithm to complete its task. These measures are crucial for assessing an algorithm's efficiency, enabling programmers to determine its suitability for specific applications. 
-            The orders of growth of an algorithm describe how time or space requirements grow as the input size increases.
-O(1) -> constant order of growth
-O(n) -> linear order of growth
-O(log n) -> logarithmic order of growth.</p>
+        <p><span class="highlight"></span> 
+            <li>Space Complexity : additional memory an algorithm requires during execution 
+            Time Complexity: the duration it takes for an algorithm to complete its task. These measures are crucial for assessing an algorithm's efficiency, enabling programmers to determine its suitability for specific applications. </li>
+            <li>The orders of growth of an algorithm describe how time or space requirements grow as the input size increases.</li>
+<li><strong>O(1)</strong> -> constant order of growth</li>
+<li><strong>O(n)</strong> -> linear order of growth</li>
+<li><strong>O(log n)</strong> -> logarithmic order of growth.</li></p>
         <h2>3. Take away from different design principles from chapter 2?</h2>
         <p><span class="highlight"></span> Studying different algorithms has helped me grasp their key principles and applications more clearly. For example, AVL trees and Red-Black trees taught me how maintaining balance in data structures is essential for efficient operations. Exploring graph traversal methods like DFS and BFS showed how different strategies can solve problems effectively—DFS being more exploratory and BFS taking a systematic approach. Learning sorting algorithms like Merge Sort, which divides and merges data, and Quick Sort, which strategically swaps elements, gave me a better understanding of how they work in practice. These concepts have provided me with a solid foundation in understanding algorithms and their practical uses.</p>
         <h2>4. The hierarchical data and how different tree data structures solve and optimize over problem scenarios (tree, bst, avl, 2-3, red-black, heap, trie)</h2>
@@ -103,36 +104,36 @@ O(log n) -> logarithmic order of growth.</p>
 These tools have practical uses, like enabling price filters on shopping sites such as Amazon, where customers can search within specific price ranges. Similarly, financial platforms use range queries to analyze stock trends over chosen periods. These structures balance speed and simplicity, making them vital for modern data-driven applications.</p>
         <h2>6. Differentiate between tree and graphs and their traversals. The applications of each.</h2>
         <p><span class="highlight"></span>
-Trees  
-- A connected, acyclic graph with n nodes and n-1 edges.  
-- Always has a root node.  
-- Is always **connected** and has no cycles.  
+<li>Trees</li>  
+<li>- A connected, acyclic graph with n nodes and n-1 edges. </li> 
+<li>- Always has a root node.  </li>
+<li>- Is always connected and has no cycles.</li>  
 
             
-Graphs  
-- A collection of vertices connected by edges, which can be cyclic or disconnected.  
-- Does not have a specific root unless explicitly defined.  
-- Can be either connected or disconnected and may include cycles.  
+<li>Graphs</li>  
+<li>- A collection of vertices connected by edges, which can be cyclic or disconnected. </li> 
+<li>- Does not have a specific root unless explicitly defined. </li> 
+<li>- Can be either connected or disconnected and may include cycles.</li>  
 
             
-Tree Traversals  
-1. Pre-order: Visit Root → Left → Right.  
-2. In-order: Visit Left → Root → Right.  
-3. Post-order: Visit Left → Right → Root.  
-Examples: Heaps, Binary Search Trees (BST) for efficient search, insertion, and deletion.  
+<li>Tree Traversals </li> 
+<li>1. Pre-order: Visit Root → Left → Right.</li>  
+<li>2. In-order: Visit Left → Root → Right.</li>  
+<li>3. Post-order: Visit Left → Right → Root. </li> 
+<li>Examples: Heaps, Binary Search Trees (BST) for efficient search, insertion, and deletion. </li>
 
-Graph Traversals  
-DFS (Depth-First Search): Explores as deeply as possible before backtracking.  
-Examples: Road navigation, Invitation tracking problems.  
+<li>Graph Traversals  </li>
+<li> (Depth-First Search): Explores as deeply as possible before backtracking.
+Examples: Road navigation, Invitation tracking problems. </li> 
 
-BFS (Breadth-First Search): Explores all neighboring nodes before moving to the next level.  
-Examples: Social networks, Communication networks.  </p>
+<li>BFS (Breadth-First Search): Explores all neighboring nodes before moving to the next level.  
+Examples: Social networks, Communication networks.</li>  </p>
         <h2>7. Deliberate on sorting and searching algorithms, the technique behind each and how they connect to the real world.</h2>
-        <p><span class="highlight"></span>### Sorting Algorithms  
+        <p><span class="highlight"></span>
 Sorting algorithms arrange data in order (ascending/descending).  
 
-1. Bubble Sort: Repeatedly compares and swaps adjacent elements.  
-2. Insertion Sort: Inserts elements into the sorted portion one by one.  
+<li>1. Bubble Sort: Repeatedly compares and swaps adjacent elements.</li>  
+<li>2. Insertion Sort: Inserts elements into the sorted portion one by one.</li>
 3. Selection Sort: Finds the smallest/largest element and places it in the sorted section.  
 4. Merge Sort: Recursively splits and merges sorted halves.  
 5. Quick Sort: Partitions the array around a pivot for sorting.  
@@ -155,32 +156,30 @@ Applications:
 1. Backtracking: It involves exploring all possible solutions and pruning the ones that do not lead to a solution, learned with the example of the N-queens problem.
 
             
-2. Sorting Algorithms:
-i. Divide and conquer: Quick and Merge Sort
+<li>2. Sorting Algorithms:</li>
+<li>i. Divide and conquer: Quick and Merge Sort</li>
 ii. Comparison-Based: Selection Sort, Insertion Sort, Bubble Sort.
 
             
-3. Brute force: Solving a problem by trying all possible solutions one-by-one.
+<li>3. Brute force: Solving a problem by trying all possible solutions one-by-one.</li>
 
             
-4. String search algorithms:
-i. Boyer-Moore
-ii. Knuth-Morris-Pratt
-iii. Rabin-Karp
+<li>4. String search algorithms:</li>
+<li></li>i. Boyer-Moore</li>
+<li></li>ii. Knuth-Morris-Pratt</li>
+<li>iii. Rabin-Karp</li>
 
             
-5. Shortest path algorithms:
-i. Dijkstra's
-ii. Floyd's
-iii. Warshall's
-iv. Prim's</p> 
+<li>5. Shortest path algorithms:</li>
+<li>i. Dijkstra's</li>
+<li>ii. Floyd's</li>
+<li>iii. Warshall's</li>
+<li>v. Prim's</li></p> 
 
         <header>
         <h1>Detailed Breakdown of Business ideas</h1>
     </header>
-    </section>
     <section id="nature" class="hover-effect">
-    <section id="Detailed Breakdown of Business ideas">
             <h2>1. Smart Parking Systems</h2>
             <ul>
                 <li><strong>Goal:</strong> Make cities and human settlements inclusive, safe, resilient, and sustainable.</li>
@@ -189,21 +188,21 @@ iv. Prim's</p>
             </ul>
         </section>
             <p><strong>Problem:</strong> 
-Urban Congestion: Cities face increasing traffic congestion due to limited parking spaces, leading to wasted time, frustration, and higher pollution levels.
+<strong>Urban Congestion</strong>: Cities face increasing traffic congestion due to limited parking spaces, leading to wasted time, frustration, and higher pollution levels.
                 
-Inefficient Parking Utilization: Traditional parking systems often lead to underutilization of available parking spaces and increased traffic as drivers circle the streets looking for parking.
+<strong>Inefficient Parking Utilization</strong>: Traditional parking systems often lead to underutilization of available parking spaces and increased traffic as drivers circle the streets looking for parking.
                 
-Environmental Impact: Time spent searching for parking contributes to unnecessary fuel consumption and carbon emissions.
+<strong>Environmental Impact</strong>: Time spent searching for parking contributes to unnecessary fuel consumption and carbon emissions.
                 
-Resource Allocation: Local governments and businesses face challenges in efficiently managing parking resources.</p>
+<strong>Resource Allocation</strong>: Local governments and businesses face challenges in efficiently managing parking resources.</p>
         
             <p><strong>Solution:</strong> Smart parking systems utilizing tries and dynamic queues to optimize parking availability and direct vehicles to open spots in real-time.</p>
             <p><strong>Implementation strategy:</strong>
-Phase 1: Pilot Program: Begin with a small-scale pilot project in a high-traffic area to test system functionality and gather feedback.
+<li>Phase 1: Pilot Program: Begin with a small-scale pilot project in a high-traffic area to test system functionality and gather feedback.</li>
                 
-Phase 2: Full-Scale Rollout: Expand the system to include additional parking areas, integrating feedback from the pilot program to refine the system.
+<li>Phase 2: Full-Scale Rollout: Expand the system to include additional parking areas, integrating feedback from the pilot program to refine the system.</li>
                 
-Phase 3: Continuous Improvement: Regular updates to the system based on user feedback, data analytics, and evolving technological advances.</p>
+<li>Phase 3: Continuous Improvement: Regular updates to the system based on user feedback, data analytics, and evolving technological advances.</li></p>
             <h3> Applications:</h3>
             <h4>Parking Slot Availability using Trie</h4>
             <p><strong>Functionality:</strong> A trie efficiently stores and retrieves parking slots based on location and type (e.g., compact, regular, or handicapped).</p>
@@ -224,16 +223,22 @@ Phase 3: Continuous Improvement: Regular updates to the system based on user fee
             <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Parking Queue Code</a> on GitHub</p>
 
             <h2>2. EV Charging Station Management</h2>
+         <ul>
+                <li><strong>Goal:</strong> Make cities and human settlements inclusive, safe, resilient, and sustainable.</li>
+                <li><strong>Target:</strong> Provide access to safe, affordable, accessible, and sustainable transport systems for all by 2030.</li>
+                <li><strong>Indicator:</strong> Proportion of population with convenient access to public transport, by sex, age, and persons with disabilities.</li>
+            </ul>
+        </section>
             <p><strong>Problem:</strong> Efficient management of EV charging stations to support the growing adoption of electric vehicles.</p>
             <p><strong>Solution:</strong> Smart management using tries and dynamic queues for real-time allocation and efficient utilization of charging slots.</p>
             <p><strong>Implementation Strategy:</strong>
-Phase 1: Site Selection and Installation: Identify high-traffic locations, install charging stations, and integrate the management system. Focus on high-demand areas like shopping centers, office parks, and highways.
+<li>Phase 1: Site Selection and Installation: Identify high-traffic locations, install charging stations, and integrate the management system. Focus on high-demand areas like shopping centers, office parks, and highways.</li>
                 
-Phase 2: Software and App Integration: Develop and deploy the cloud-based management platform and mobile apps for user access and management.
+<li>Phase 2: Software and App Integration: Develop and deploy the cloud-based management platform and mobile apps for user access and management.</li>
                 
-Phase 3: User Education and Marketing: Launch educational campaigns to raise awareness about EV charging and drive adoption of the network.
+<li>Phase 3: User Education and Marketing: Launch educational campaigns to raise awareness about EV charging and drive adoption of the network.</li>
                 
-Phase 4: Expansion and Optimization: Monitor the performance of charging stations, expand the network based on demand, and continuously optimize pricing and operations.</p>
+<li>Phase 4: Expansion and Optimization: Monitor the performance of charging stations, expand the network based on demand, and continuously optimize pricing and operations.</li></p>
             <h3> Applications:</h3>
             <h4>EV Charging Slot Availability using Trie</h4>
             <p><strong>Functionality:</strong> A trie efficiently stores and retrieves EV charging slots based on location, type, and availability.</p>
@@ -246,11 +251,11 @@ Phase 4: Expansion and Optimization: Monitor the performance of charging station
 
             <h4>Binary search tree for Real-time EV Slot Allocation</h4>
             <p><strong>Functionality:</strong> 
-Insert Charging Slot: Add a new charging slot to the system (represented by a unique slotID).
+<li>Insert Charging Slot: Add a new charging slot to the system (represented by a unique slotID).</li>
                 
-Allocate Slot to EV: Allocate a slot to an electric vehicle (EV) if the slot is available.
+<li>Allocate Slot to EV: Allocate a slot to an electric vehicle (EV) if the slot is available.</li>
                 
-Deallocate Slot: Once the EV finishes charging, the slot becomes available again.</p>
+<li>Deallocate Slot: Once the EV finishes charging, the slot becomes available again.</li></p>
         
             <p><strong>Example Usage:</strong></p>
             <ul>
