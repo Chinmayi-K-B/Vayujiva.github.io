@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Project Page - Vayujiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F1E8D6; /* Pastel Coffee Beige */
-            color: #3E2723; /* Dark Brown */
-            transition: background-color 0.5s ease-in-out;
+            background-color: #F1E8D6;
+            color: #3E2723;
+            overflow-x: hidden;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #A87C55; /* Coffee Brown */
-            padding: 15px 0;
+            background-color: #A87C55;
+            padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 10;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
         }
 
         nav a {
@@ -33,23 +40,37 @@
             margin: 0 20px;
             font-weight: 600;
             font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease-in-out;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #D7C8B0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
         }
 
         nav a:hover {
-            color: #D7C8B0; /* Light Coffee */
+            color: #D7C8B0;
         }
 
         /* Header Section */
         header {
             text-align: center;
-            padding: 4rem 2rem;
-            background: #D7C8B0; /* Light Coffee */
+            padding: 4rem 20px;
+            background: #D7C8B0;
             color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-out;
+            position: relative;
         }
 
         header h1 {
@@ -57,100 +78,72 @@
             font-weight: 600;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
         }
 
-        header p {
-            font-size: 1.5rem;
+        header h3 {
+            font-size: 1.6rem;
             max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-out;
         }
 
         /* Content Section */
         section {
-            background-color: #F8F4E3; /* Light Beige */
-            color: #5D4037; /* Medium Coffee Brown */
+            background-color: #F8F4E3;
+            color: #5D4037;
             padding: 40px 20px;
-            text-align: center;
-            max-width: 1200px;
             margin: 30px auto;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            max-width: 1200px;
+            transition: transform 0.3s ease;
         }
 
         section:hover {
-            transform: scale(1.02);
+            transform: translateY(-10px);
         }
 
         section h2 {
-            color: #A87C55; /* Coffee Brown */
+            color: #A87C55;
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         section h3 {
+            color: #A87C55;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .button-link {
+            display: inline-block;
+            background-color: #A87C55;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-link:hover {
+            background-color: #D7C8B0;
             color: #3E2723;
-            font-size: 1.2rem;
-            font-weight: 400;
         }
 
         .image-section img {
             max-width: 100%;
             border-radius: 10px;
-            margin-top: 15px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease;
         }
 
         .image-section img:hover {
             transform: scale(1.05);
         }
 
-        .button-link {
-            display: inline-block;
-            background-color: #A87C55; /* Coffee Brown */
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .button-link:hover {
-            background-color: #D7C8B0; /* Light Coffee */
-            color: #3E2723; /* Dark Brown */
-            transform: translateY(-5px);
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            text-align: left;
-        }
-
-        ul li {
-            margin: 10px 0;
-            font-size: 1.1rem;
-        }
-
-        /* Footer Section */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #3E2723; /* Dark Coffee */
-            color: #F1E8D6; /* Pastel Coffee Beige */
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Table Styles */
+        /* Card-style Business Cases */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -158,9 +151,9 @@
         }
 
         table th, table td {
-            padding: 12px 15px;
-            text-align: left;
-            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ccc;
         }
 
         table th {
@@ -168,8 +161,24 @@
             color: white;
         }
 
-        table tr:nth-child(even) {
-            background-color: #f9f9f9;
+        table td {
+            background-color: #F8F4E3;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3E2723;
+            color: #F1E8D6;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        footer p {
+            margin: 0;
         }
 
         /* Responsive Design */
@@ -182,95 +191,77 @@
                 padding: 20px;
             }
 
-            .button-link {
-                padding: 10px 20px;
-            }
-
             nav {
                 padding: 10px;
             }
 
-            table th, table td {
-                font-size: 0.9rem;
+            nav ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            nav a {
+                margin: 10px 0;
             }
         }
 
-        /* Animation */
+        /* Animations */
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav>
-        <ul style="list-style: none; display: flex; justify-content: center; padding: 0; margin: 0;">
-            <li style="margin: 0 1rem;"><a href="index.html">Home</a></li>
-            <li style="margin: 0 1rem;"><a href="project.html">Project</a></li>
-            <li style="margin: 0 1rem;"><a href="about.html">About</a></li>
-            <li style="margin: 0 1rem;"><a href="chinmayi.html">Chinmayi</a></li>
-            <li style="margin: 0 1rem;"><a href="ananya.html">Ananya</a></li>
-            <li style="margin: 0 1rem;"><a href="ria.html">Ria</a></li>
-            <li style="margin: 0 1rem;"><a href="sanjana.html">Sanjana</a></li>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="chinmayi.html">Chinmayi</a></li>
+            <li><a href="ananya.html">Ananya</a></li>
+            <li><a href="ria.html">Ria</a></li>
+            <li><a href="sanjana.html">Sanjana</a></li>
         </ul>
     </nav>
 
     <!-- Header Section -->
     <header>
         <h1>City Design</h1>
-        <h3>Our flagship project is an ambitious sustainable city plan designed from the ground up to foster an eco-friendly, resource-efficient, and socially inclusive urban environment. It incorporates innovative approaches to boost energy efficiency, minimize waste, optimize transportation, and enhance community well-being. By tackling key challenges of contemporary urbanization—such as overpopulation, resource scarcity, and environmental impact—this project provides a comprehensive solution for building the cities of the future.</h3>
+        <h3>Our flagship project is an ambitious sustainable city plan designed from the ground up to foster an eco-friendly, resource-efficient, and socially inclusive urban environment.</h3>
     </header>
 
     <!-- Main Section -->
     <main>
-        <!-- Section 1: City Plan Image -->
+        <!-- City Plan Image -->
         <section class="image-section">
             <h2>City Plan</h2>
             <p>Take a look at our innovative city layout designed to maximize sustainability and efficiency.</p>
-            <img src="path_to_image.jpeg" alt="City Plan">
+            <img src="https://via.placeholder.com/800x400" alt="City Plan">
         </section>
 
-        <!-- Section 2: Description PDF -->
-        <section class="description-section">
-            <h2>Description</h2>
-            <p>Download the detailed description of the project, outlining our objectives and approach.</p>
-            <a href="city-description.pdf" class="button-link" download>Download Description</a>
-        </section>
-
-        <!-- Section 3: Problem Statement -->
-        <section class="problem-section">
+        <!-- Project Description -->
+        <section>
             <h2>Project Description: Vayujiva</h2>
-            <p>
-                <strong>Vayujiva</strong> is a visionary initiative aimed at creating a sustainable and futuristic smart city. 
-                Built on eco-friendly principles, it emphasizes decentralization, resource efficiency, and community well-being, 
-                offering innovative and inclusive urban solutions.
-            </p>
-
-            <p><strong>Key Features:</strong></p>
+            <p><strong>Vayujiva</strong> is a visionary initiative aimed at creating a sustainable and futuristic smart city.</p>
+            <h3>Key Features:</h3>
             <ul>
-                <li><strong>Decentralized Development:</strong> Balanced distribution of facilities, ensuring equitable focus on all city regions.</li>
-                <li><strong>Smart Technology Integration:</strong> Advanced solutions for energy management, waste reduction, and city-wide connectivity.</li>
-                <li><strong>Eco-Conscious Infrastructure:</strong> Emphasis on renewable energy, sustainable construction, and expansive green spaces.</li>
-                <li><strong>People-Centric Design:</strong> Inclusive spaces for healthcare, education, and recreation, fostering social harmony.</li>
+                <li><strong>Decentralized Development:</strong> Balanced distribution of facilities for equitable focus.</li>
+                <li><strong>Smart Technology Integration:</strong> Advanced solutions for energy management, waste reduction.</li>
+                <li><strong>Eco-Conscious Infrastructure:</strong> Emphasis on renewable energy, sustainable construction, and green spaces.</li>
+                <li><strong>People-Centric Design:</strong> Inclusive spaces for healthcare, education, and recreation.</li>
             </ul>
-
-            <p>
-                Vayujiva tackles critical challenges like overpopulation, resource depletion, and environmental sustainability, 
-                offering a blueprint for smarter, greener cities of the future.
-            </p>
-            <h2>Problem Statement</h2>
-            <p>
-                Urban mobility is plagued by challenges such as traffic congestion, lack of parking, and slow emergency response. 
-                A smart system that efficiently manages traffic, parking, and emergencies can greatly improve urban living, 
-                reducing delays and enhancing efficiency.
-            </p>
         </section>
 
-        <!-- Section 4: Business Cases -->
-        <section class="business-section">
+        <!-- Business Cases -->
+        <section>
             <h2>Business Cases Identified</h2>
-            <p>We have identified key business opportunities within the project:</p>
             <table>
                 <thead>
                     <tr>
@@ -285,44 +276,16 @@
                     <tr>
                         <td>1</td>
                         <td>Real-time Traffic Monitoring</td>
-                        <td>Collect, process, and store traffic data in real-time using IoT devices and sensors.</td>
+                        <td>Collect and process traffic data using IoT devices.</td>
                         <td>Ananya B P</td>
-                        <td>Arrays, Hashing, Sparse Table</td>
+                        <td>Arrays, Hashing</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Citizen Feedback Processing</td>
-                        <td>Collect, analyze, and act on citizen feedback regarding traffic issues.</td>
+                        <td>Analyze citizen feedback regarding traffic issues.</td>
                         <td>Ria</td>
-                        <td>Brute Force String Search, Rabin-Karp, Lookup Table</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Smart Traffic Signal Control</td>
-                        <td>Dynamically adjust signal timings based on traffic flow and congestion.</td>
-                        <td>Sanjana</td>
-                        <td>Heap, AVL Tree, BFS, Binary Search Tree</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Smart Parking Systems</td>
-                        <td>Use Trie to store and search for parking space availability in real time, providing instant updates.</td>
-                        <td>Chinmayi K B</td>
-                        <td>Trie, Queue</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Emergency Vehicle Routing</td>
-                        <td>Implement a 2-3 Tree to handle route optimization for emergency vehicles, ensuring minimal delay.</td>
-                        <td>Ria and Sanjana</td>
-                        <td>2-3 Tree, Dijkstra’s Algorithm</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>EV Charging Station Management</td>
-                        <td>Locate and manage EV charging stations in the city.</td>
-                        <td>Ananya and Chinmayi</td>
-                        <td>Binary Search Tree, Trie, Arrays</td>
+                        <td>Brute Force, Rabin-Karp</td>
                     </tr>
                 </tbody>
             </table>
