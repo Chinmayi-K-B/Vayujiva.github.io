@@ -3,152 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Home</title>
     <style>
+        /* Enable Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9; /* Light Grayish Mint */
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            color: #333333; /* Dark Slate Gray */
         }
-
+        
+        /* Navigation Bar */
         nav {
-            background: linear-gradient(90deg, #4caf50, #81c784);
-            color: white;
+            background-color: #4caf50; /* Green */
+            padding: 15px;
             text-align: center;
-            padding: 1rem;
         }
-
+        
         nav a {
-            color: white;
+            color: #ffffff; /* White */
             text-decoration: none;
-            font-weight: 600;
-            margin: 0 1rem;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
-
+        
         nav a:hover {
-            text-decoration: underline;
+            color: #81c784; /* Light Green */
         }
-
+        
+        /* Header */
         header {
-            background: #006D77;
-            color: #FFDDD2;
+            background-color: #006D77; /* Deep Teal */
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 30px 15px;
+            color: #ffffff; /* White */
             font-size: 2.5rem;
         }
-
+        
+        /* Main Content */
         main {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 2rem;
-            background-color: white;
+            padding: 20px;
+            background-color: #ffffff; /* White for contrast */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        main h2 {
-            color: #4caf50;
-            text-align: center;
-            margin-bottom: 1rem;
+        
+        main h1, main h2 {
+            color: #81c784; /* Light Green */
+            margin-bottom: 10px;
         }
-
+        
         main h3 {
-            color: #222222;
+            color: #333333; /* Dark Slate Gray */
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
-
+        
         .content-box {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-left: 5px solid #4caf50;
-            margin-bottom: 2rem;
+            background-color: #ffffff; /* White for the box background */
+            padding: 20px;
+            border-left: 5px solid #81c784; /* Light Green accent */
+            margin-bottom: 20px;
             border-radius: 8px;
         }
-
+        
+        /* Footer */
         footer {
-            background: #006D77;
-            color: #FFDDD2;
+            background-color: #4caf50; /* Green */
+            color: #ffffff; /* White */
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 10px 0;
+            margin-top: 20px;
         }
-
+        
         footer p {
             margin: 0;
         }
-
+        
+        /* Additional Styles */
         a {
-            color: #4caf50;
+            color: #81c784; /* Light Green */
             text-decoration: none;
         }
-
+        
         a:hover {
             text-decoration: underline;
-            color: #222222;
+            color: #333333; /* Dark Slate Gray */
         }
-
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             nav a {
                 display: block;
                 margin: 10px 0;
             }
-
+        
             main {
                 padding: 15px;
             }
-
+        
             header {
                 font-size: 2rem;
             }
         }
+        
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
-        <a href="index.html">Home</a>
+        <a href="home.html">Home</a>
         <a href="project.html">Project</a>
-        <a href="chinmayi.html">Chinmayi</a>
         <a href="ananya.html">Ananya</a>
+        <a href="chinmayi.html">Chinmayi</a>
         <a href="ria.html">Ria</a>
         <a href="sanjana.html">Sanjana</a>
     </nav>
 
     <!-- Header Section -->
     <header>
-        <h1><strong>City Design</strong></h1>
-        <p>Our opportunity to design a smart city on 1500 sq m of barren land.</p>
+        <h1><b><strong>Vayujiva</strong></b></h1>
     </header>
 
     <!-- Main Content -->
     <main>
-        <div class="content-box">
-            <h2>About the Course</h2>
-            <h3>What is the course about?</h3>
-            <p>Design and Analysis of Algorithms (DAA) is not just a part of computer science; it's at the core of problem-solving across various domains. The course connects nature's patterns with algorithmic solutions and emphasizes analytical thinking, equipping students with problem-solving skills for real-world challenges.</p>
+        <div class="content-box">       
+            <h2><p>About Our Project</p></h2>
+            <h3>We had the opportunity to conceptualize and design a futuristic smart city on a 1500 sq m plot of barren land. Our vision centered on creating a self-sustaining, interconnected urban ecosystem that balances modern infrastructure with environmental consciousness. We focused on integrating renewable energy, efficient public transportation, and accessible facilities for all sectors. The process involved tackling challenges like sustainable resource management, optimal land utilization, and addressing diverse population needs. This project reflects our innovative approach to urban planning, combining technology, functionality, and sustainability to build a city of the future.</h3>
         </div>
-
-        <div class="content-box">
-            <h3>What kind of data structures and algorithms have you studied?</h3>
-            <p>We explored arrays, strings, linked lists, stacks, queues, trees, graphs, and skip lists. Each data structure reflects a real-world concept, helping to efficiently manage and process information for various applications, from web pages to social networks.</p>
-        </div>
-
-        <div class="content-box">
-            <h3>How do you connect the course with real-time applications?</h3>
-            <p>Algorithms are embedded in everyday life, optimizing experiences like GPS routing and product recommendations. They simplify complex tasks, making technology smarter, safer, and more intuitive, seamlessly shaping how we interact with the digital world.</p>
-        </div>
+            <h1><p>About the course</p></h1>
+        <h2>What is the course about?</h2>
+        <h3><p>Design and Analysis of Algorithms (DAA) isn’t just a part of computer science—it’s at the heart of it. What’s fascinating is how its principles reach beyond computers, shaping areas like science, business, and technology. This course dives into the patterns we see in nature, showing how natural processes and algorithms often inspire each other. It’s all about sharpening your analytical thinking and giving you practical tools to tackle real-world problems in creative ways.</p></h3>
+        <h2>What kind of data structures and algorithms have you studied?</h2>
+        <h3><p>Exploring data structures is like stepping into a world full of familiar and fascinating ideas. Arrays and strings feel like neat, organized rows of information, while linked lists remind you of the way web pages connect to each other. Stacks and queues bring to mind everyday things, like stacking plates or waiting in line. Trees and tries make you think of family trees or maps that help you search quickly and efficiently. Graphs, on the other hand, are like roadmaps or social networks, showing how different points are connected and helping you find the shortest path or strongest link. And then there are skip lists, which add a touch of randomness—like flipping a coin—but still manage to stay fast and reliable.</p></h3>
+        <h2>How do you connect the course with real time applications?</h2>
+        <h3><p>Algorithms are everywhere around us, even if we don’t always notice them—like the air we breathe. They help us get home faster by finding the quickest route on GPS, thanks to Dijkstra’s Algorithm, and sort through endless products on e-commerce sites to show us exactly what we’re looking for. These behind-the-scenes problem-solvers take complicated tasks and turn them into simple, seamless experiences. They’re the invisible helpers making our technology smarter, safer, and more personal every single day.</p></h3>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Vayujiva. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Vayujiva. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
