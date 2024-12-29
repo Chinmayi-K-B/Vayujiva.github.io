@@ -103,23 +103,25 @@ O(log n) -> logarithmic order of growth.</p>
 These tools have practical uses, like enabling price filters on shopping sites such as Amazon, where customers can search within specific price ranges. Similarly, financial platforms use range queries to analyze stock trends over chosen periods. These structures balance speed and simplicity, making them vital for modern data-driven applications.</p>
         <h2>6. Differentiate between tree and graphs and their traversals. The applications of each.</h2>
         <p><span class="highlight"></span>
-### Trees  
+Trees  
 - A connected, acyclic graph with n nodes and n-1 edges.  
 - Always has a root node.  
 - Is always **connected** and has no cycles.  
 
-### Graphs  
+            
+Graphs  
 - A collection of vertices connected by edges, which can be cyclic or disconnected.  
 - Does not have a specific root unless explicitly defined.  
 - Can be either connected or disconnected and may include cycles.  
 
-### Tree Traversals  
+            
+Tree Traversals  
 1. Pre-order: Visit Root → Left → Right.  
 2. In-order: Visit Left → Root → Right.  
 3. Post-order: Visit Left → Right → Root.  
 Examples: Heaps, Binary Search Trees (BST) for efficient search, insertion, and deletion.  
 
-### Graph Traversals  
+Graph Traversals  
 DFS (Depth-First Search): Explores as deeply as possible before backtracking.  
 Examples: Road navigation, Invitation tracking problems.  
 
@@ -139,7 +141,7 @@ Applications:
 - Database Management: Sorting for faster querying.  
 - E-commerce: Arranging products by price, ratings, etc.  
 
-### Searching Algorithms  
+Searching Algorithms  
 Searching algorithms locate specific elements in data structures.  
 
 Applications:  
@@ -149,26 +151,35 @@ Applications:
         <p><span class="highlight"></span>Graph algorithms play a crucial role in solving problems related to traversal. To minimize traversal costs, algorithms like Kruskal’s and Prim’s are used to find the minimum spanning tree. These are commonly applied in areas such as laying cables, pipelines, and building networks. When the goal is to determine the shortest path, algorithms like Dijkstra and Floyd-Warshall come into play. These are vital for network routing, mapping, and other navigation tasks. By utilizing spanning trees and shortest path algorithms, efficiency is improved, and costs are reduced.</p>
         <h2>9. Discuss the different studied algorithm design techniques</h2>
         <p><span class="highlight"></span>
-            Different algorithms studied:
+ Different algorithms studied:
 1. Backtracking: It involves exploring all possible solutions and pruning the ones that do not lead to a solution, learned with the example of the N-queens problem.
 
+            
 2. Sorting Algorithms:
 i. Divide and conquer: Quick and Merge Sort
 ii. Comparison-Based: Selection Sort, Insertion Sort, Bubble Sort.
 
+            
 3. Brute force: Solving a problem by trying all possible solutions one-by-one.
 
+            
 4. String search algorithms:
 i. Boyer-Moore
 ii. Knuth-Morris-Pratt
 iii. Rabin-Karp
 
+            
 5. Shortest path algorithms:
 i. Dijkstra's
 ii. Floyd's
 iii. Warshall's
 iv. Prim's</p> 
+
+        <header>
+        <h1>Detailed Breakdown of Business ideas</h1>
+    </header>
     </section>
+    <section id="nature" class="hover-effect">
     <section id="Detailed Breakdown of Business ideas">
             <h2>1. Smart Parking Systems</h2>
             <ul>
@@ -179,13 +190,19 @@ iv. Prim's</p>
         </section>
             <p><strong>Problem:</strong> 
 Urban Congestion: Cities face increasing traffic congestion due to limited parking spaces, leading to wasted time, frustration, and higher pollution levels.
+                
 Inefficient Parking Utilization: Traditional parking systems often lead to underutilization of available parking spaces and increased traffic as drivers circle the streets looking for parking.
+                
 Environmental Impact: Time spent searching for parking contributes to unnecessary fuel consumption and carbon emissions.
+                
 Resource Allocation: Local governments and businesses face challenges in efficiently managing parking resources.</p>
+        
             <p><strong>Solution:</strong> Smart parking systems utilizing tries and dynamic queues to optimize parking availability and direct vehicles to open spots in real-time.</p>
             <p><strong>Implementation strategy:</strong>
 Phase 1: Pilot Program: Begin with a small-scale pilot project in a high-traffic area to test system functionality and gather feedback.
+                
 Phase 2: Full-Scale Rollout: Expand the system to include additional parking areas, integrating feedback from the pilot program to refine the system.
+                
 Phase 3: Continuous Improvement: Regular updates to the system based on user feedback, data analytics, and evolving technological advances.</p>
             <h3> Applications:</h3>
             <h4>Parking Slot Availability using Trie</h4>
@@ -211,8 +228,11 @@ Phase 3: Continuous Improvement: Regular updates to the system based on user fee
             <p><strong>Solution:</strong> Smart management using tries and dynamic queues for real-time allocation and efficient utilization of charging slots.</p>
             <p><strong>Implementation Strategy:</strong>
 Phase 1: Site Selection and Installation: Identify high-traffic locations, install charging stations, and integrate the management system. Focus on high-demand areas like shopping centers, office parks, and highways.
+                
 Phase 2: Software and App Integration: Develop and deploy the cloud-based management platform and mobile apps for user access and management.
+                
 Phase 3: User Education and Marketing: Launch educational campaigns to raise awareness about EV charging and drive adoption of the network.
+                
 Phase 4: Expansion and Optimization: Monitor the performance of charging stations, expand the network based on demand, and continuously optimize pricing and operations.</p>
             <h3> Applications:</h3>
             <h4>EV Charging Slot Availability using Trie</h4>
@@ -227,8 +247,11 @@ Phase 4: Expansion and Optimization: Monitor the performance of charging station
             <h4>Binary search tree for Real-time EV Slot Allocation</h4>
             <p><strong>Functionality:</strong> 
 Insert Charging Slot: Add a new charging slot to the system (represented by a unique slotID).
+                
 Allocate Slot to EV: Allocate a slot to an electric vehicle (EV) if the slot is available.
+                
 Deallocate Slot: Once the EV finishes charging, the slot becomes available again.</p>
+        
             <p><strong>Example Usage:</strong></p>
             <ul>
                 <li>Vehicles are queued as they arrive at a charging station.</li>
