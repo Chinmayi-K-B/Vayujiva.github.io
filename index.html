@@ -14,6 +14,7 @@
             padding: 0;
             color: #3E2723; /* Dark Brown */
             line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         /* Navigation Bar */
@@ -25,6 +26,7 @@
             top: 0;
             z-index: 10;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideInNav 1s ease-out;
         }
 
         nav a {
@@ -34,6 +36,7 @@
             font-weight: 600;
             font-size: 1.1rem;
             text-transform: uppercase;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
@@ -47,13 +50,16 @@
             padding: 4rem 2rem;
             background: linear-gradient(to bottom right, #A87C55, #D7C8B0);
             color: white;
+            opacity: 0;
+            animation: fadeInHeader 2s forwards;
         }
 
         header h1 {
             font-size: 4rem;
             font-weight: 600;
             margin-bottom: 20px;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adding subtle shadow */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            animation: slideInText 1s ease-out;
         }
 
         header p {
@@ -63,6 +69,7 @@
             z-index: 2;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
             line-height: 1.8;
+            animation: fadeInText 2s ease-out;
         }
 
         /* Content Section */
@@ -76,6 +83,8 @@
             border-radius: 15px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeInSection 1.5s forwards;
         }
 
         section:hover {
@@ -89,6 +98,19 @@
         section p {
             font-size: 1.2rem;
             line-height: 1.8;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Slight scale effect on hover */
         }
 
         /* Footer Section */
@@ -129,6 +151,58 @@
             }
         }
 
+        /* Animations */
+        @keyframes fadeInHeader {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInSection {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInText {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInNav {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
         /* Additional Styles for Smooth Scrolling and Visuals */
         html {
             scroll-behavior: smooth;
@@ -139,19 +213,6 @@
             display: inline-block;
             padding-bottom: 10px;
             margin-bottom: 20px;
-        }
-
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
         }
     </style>
 </head>
