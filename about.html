@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             color: #3E2723; /* Dark Brown */
+            line-height: 1.6;
         }
 
         /* Navigation Bar */
@@ -23,6 +24,7 @@
             position: sticky;
             top: 0;
             z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
@@ -35,30 +37,29 @@
 
         nav a:hover {
             color: #D7C8B0; /* Light Coffee */
+            text-decoration: underline;
         }
 
         /* Header Section */
         header {
             text-align: center;
-            padding: 2rem;
-            background: #D7C8B0; /* Light Coffee */
+            padding: 3rem 20px;
+            background: linear-gradient(135deg, #A87C55, #D7C8B0); /* Gradient background */
             color: white;
         }
 
         header h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 600;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding subtle shadow */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
 
-        header h3 {
+        header h4 {
             font-size: 1.5rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-            z-index: 2;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         }
 
         /* Team Section */
@@ -66,17 +67,23 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 20px;
+            padding: 40px 20px;
+            gap: 30px;
         }
 
         .team-member {
             background-color: white;
-            border-radius: 8px;
-            margin: 15px;
+            border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 250px;
             text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .team-member img {
@@ -90,25 +97,35 @@
         .team-member h3 {
             font-size: 1.2em;
             margin: 10px 0;
+            color: #3E2723;
         }
 
         .team-member p {
             color: #555;
-            margin: 0;
+            margin: 5px 0;
+            font-size: 0.9em;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 10px;
         }
 
         .skill {
-            background-color: #ddd;
-            border-radius: 5px;
-            margin: 5px;
-            padding: 5px 10px;
+            background-color: #F1E8D6;
+            border-radius: 15px;
+            padding: 5px 15px;
             font-size: 0.9em;
+            color: #3E2723;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill:hover {
+            background-color: #A87C55;
+            color: white;
         }
 
         /* Footer Section */
@@ -132,27 +149,56 @@
                 font-size: 2.5rem;
             }
 
-            section {
+            header h4 {
+                font-size: 1.2rem;
+                max-width: 90%;
+            }
+
+            .team-container {
+                flex-direction: column;
+                align-items: center;
                 padding: 20px;
+            }
+
+            .team-member {
+                width: 90%;
+                margin-bottom: 20px;
             }
 
             nav {
                 padding: 10px;
             }
+
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 8px;
+            }
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav>
         <ul style="list-style: none; display: flex; justify-content: center; padding: 0; margin: 0;">
-            <li style="margin: 0 1rem;"><a href="index.html">Home</a></li>
-            <li style="margin: 0 1rem;"><a href="project.html">Project</a></li>
-            <li style="margin: 0 1rem;"><a href="about.html">About</a></li>
-            <li style="margin: 0 1rem;"><a href="chinmayi.html">Chinmayi</a></li>
-            <li style="margin: 0 1rem;"><a href="ananya.html">Ananya</a></li>
-            <li style="margin: 0 1rem;"><a href="ria.html">Ria</a></li>
-            <li style="margin: 0 1rem;"><a href="sanjana.html">Sanjana</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="chinmayi.html">Chinmayi</a></li>
+            <li><a href="ananya.html">Ananya</a></li>
+            <li><a href="ria.html">Ria</a></li>
+            <li><a href="sanjana.html">Sanjana</a></li>
         </ul>
     </nav>
 
@@ -166,7 +212,7 @@
     <div class="team-container">
         <!-- Team Member 1 -->
         <div class="team-member">
-            <img src=""D:\WEB DEV\Html - personal site\Screenshot (32)n.png"" alt="Team Member 1">
+            <img src="member1.jpg" alt="Chinmayi K B">
             <h3>Chinmayi K B</h3>
             <p>Roll no - 412</p>
             <p>USN - 01FE23BCS080</p>
@@ -174,46 +220,46 @@
                 <div class="skill">C and C++</div>
                 <div class="skill">Python</div>
                 <div class="skill">SQL</div>
-                <div class="skill">Web Development(HTML and CSS)</div>
+                <div class="skill">Web Development (HTML & CSS)</div>
             </div>
         </div>
 
         <!-- Team Member 2 -->
         <div class="team-member">
-            <img src="member2.jpg" alt="Team Member 2">
+            <img src="member2.jpg" alt="Ananya B Pattanashetty">
             <h3>Ananya B Pattanashetty</h3>
             <p>Roll no - 406</p>
             <p>USN - 01FE23BCS055</p>
             <div class="skills">
-                 <div class="skill">C and C++</div>
+                <div class="skill">C and C++</div>
                 <div class="skill">SQL</div>
-                <div class="skill">Web Development(HTML and CSS)</div>
+                <div class="skill">Web Development (HTML & CSS)</div>
             </div>
         </div>
 
         <!-- Team Member 3 -->
         <div class="team-member">
-            <img src="member3.jpg" alt="Team Member 3">
+            <img src="member3.jpg" alt="Ria Javalgi">
             <h3>Ria Javalgi</h3>
             <p>Roll no - 408</p>
             <p>USN - 01FE23BCS</p>
             <div class="skills">
                 <div class="skill">C and C++</div>
                 <div class="skill">SQL</div>
-                <div class="skill">Web Development(HTML and CSS)</div>
+                <div class="skill">Web Development (HTML & CSS)</div>
             </div>
         </div>
 
         <!-- Team Member 4 -->
         <div class="team-member">
-            <img src="member4.jpg" alt="Team Member 4">
+            <img src="member4.jpg" alt="Sanjana S">
             <h3>Sanjana S</h3>
             <p>Roll no - 407</p>
             <p>USN - 01FE23BCS</p>
             <div class="skills">
                 <div class="skill">C and C++</div>
                 <div class="skill">SQL</div>
-                <div class="skill">Web Development(HTML and CSS)</div>
+                <div class="skill">Web Development (HTML & CSS)</div>
             </div>
         </div>
     </div>
@@ -224,4 +270,3 @@
     </footer>
 </body>
 </html>
-
