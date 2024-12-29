@@ -5,126 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-    <style>/* Enable Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #F6F5F5; /* Off-white/Light Beige */
-    margin: 0;
-    padding: 0;
-    color: #333333; /* Dark Gray/Charcoal */
-}
-
-/* Navigation Bar */
-nav {
-    background-color: #006F7A; /* Teal */
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: #EDDFE0; /* Muted Peach */
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-nav a:hover {
-    color: #FF6F61; /* Vibrant Coral */
-}
-
-/* Header */
-header {
-    background-color: #006F7A; /* Teal */
-    text-align: center;
-    padding: 30px 15px;
-    color: #EDDFE0; /* Muted Peach */
-    font-size: 2.5rem;
-    font-family: 'Playfair Display', serif; /* Elegant font for headers */
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #FFFFFF; /* White for contrast */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-main h1, main h2 {
-    color: #FF6F61; /* Vibrant Coral */
-    margin-bottom: 10px;
-}
-
-main h3 {
-    color: #333333; /* Dark Gray/Charcoal */
-    line-height: 1.6;
-}
-
-.content-box {
-    background-color: #FFFFFF; /* White for the box background */
-    padding: 20px;
-    border-left: 5px solid #EDDFE0; /* Muted Peach accent */
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-/* Footer */
-footer {
-    background-color: #006F7A; /* Teal */
-    color: #EDDFE0; /* Muted Peach */
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Additional Styles */
-a {
-    color: #FF6F61; /* Vibrant Coral */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #333333; /* Dark Gray/Charcoal */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    header {
-        font-size: 2rem;
-    }
-}
-
-          <!-- Navigation Bar -->
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="project.html">Project</a>
-        <a href="ananya.html">Ananya</a>
-        <a href="chinmayi.html">Chinmayi</a>
-        <a href="ria.html">Ria</a>
-        <a href="sanjana.html">Sanjana</a>
-    </nav>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+        section h2 {
+            text-align: center;
+            color: #4caf50;
+        }
+        section ul {
+            padding-left: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #4caf50;
+            color: white;
+            margin-top: 2rem;
+        }
+        .highlight {
+            color: #4caf50;
+            font-weight: 600;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        nav {
+            background: #4caf50;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
         <h1>Course Reflections</h1>
     </header>
 
