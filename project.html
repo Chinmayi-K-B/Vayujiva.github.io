@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #F1E8D6; /* Pastel Coffee Beige */
             margin: 0;
             padding: 0;
-            background-color: #F1E8D6; /* Pastel Coffee Beige */
             color: #3E2723; /* Dark Brown */
         }
 
@@ -37,7 +36,7 @@
             color: #D7C8B0; /* Light Coffee */
         }
 
-        /* Header Section */
+        /* Hero Section */
         header {
             text-align: center;
             padding: 2rem;
@@ -49,18 +48,19 @@
             font-size: 4rem;
             font-weight: 600;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding subtle shadow */
         }
 
         header p {
             font-size: 1.5rem;
             max-width: 600px;
             margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         /* Content Section */
         section {
-            background-color: #F8F4E3; /* Light Beige */
+            background-color: #F8F4E3; /* Pale Pastel Coffee */
             color: #5D4037; /* Medium Coffee Brown */
             padding: 40px 20px;
             text-align: center;
@@ -74,43 +74,35 @@
             color: #A87C55; /* Coffee Brown */
         }
 
-        .image-section img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 15px;
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1rem;
         }
 
-        .button-link {
-            display: inline-block;
-            background-color: #A87C55; /* Coffee Brown */
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #A87C55;
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 15px;
-            font-weight: bold;
         }
 
-        .button-link:hover {
-            background-color: #D7C8B0; /* Light Coffee */
-            color: #3E2723; /* Dark Brown */
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin: 10px 0;
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
 
         /* Footer Section */
         footer {
-            text-align: center;
-            padding: 20px;
             background-color: #3E2723; /* Dark Coffee */
             color: #F1E8D6; /* Pastel Coffee Beige */
+            text-align: center;
+            padding: 20px;
             position: relative;
             bottom: 0;
             width: 100%;
@@ -133,130 +125,103 @@
             nav {
                 padding: 10px;
             }
+
+            table {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Hover Effect */
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        /* Highlight Class */
+        .highlight {
+            color: #4caf50;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-     <nav>
-        <ul style="list-style: none; display: flex; justify-content: center; padding: 0; margin: 0;">
-            <li style="margin: 0 1rem;"><a href="index.html">Home</a></li>
-            <li style="margin: 0 1rem;"><a href="project.html">Project</a></li>
-            <li style="margin: 0 1rem;"><a href="about.html">About</a></li>
-            <li style="margin: 0 1rem;"><a href="chinmayi.html">Chinmayi</a></li>
-            <li style="margin: 0 1rem;"><a href="ananya.html">Ananya</a></li>
-            <li style="margin: 0 1rem;"><a href="ria.html">Ria</a></li>
-            <li style="margin: 0 1rem;"><a href="sanjana.html">Sanjana</a></li>
-        </ul>
-    </nav>
 
-    <!-- Header Section -->
     <header>
-        <h1>City Design</h1>
-        <h3>Our flagship project is an ambitious sustainable city plan designed from the ground up to foster an eco-friendly, resource-efficient, and socially inclusive urban environment. It incorporates innovative approaches to boost energy efficiency, minimize waste, optimize transportation, and enhance community well-being. By tackling key challenges of contemporary urbanization—such as overpopulation, resource scarcity, and environmental impact—this project provides a comprehensive solution for building the cities of the future.</h3>
+        <h1>Business Ideas</h1>
     </header>
 
-    <!-- Main Section -->
-    <main>
-        <!-- Section 1: City Plan Image -->
-        <section class="image-section">
-            <h2>City Plan</h2>
-            <p>Take a look at our innovative city layout designed to maximize sustainability and efficiency.</p>
-            <img src=""C:\Users\hp\Downloads\WhatsApp Image 2024-12-21 at 10.19.34.jpeg"" alt="City Plan">
-        </section>
-
-        <!-- Section 2: Description PDF -->
-        <section class="description-section">
-            <h2>Description</h2>
-            <p>Download the detailed description of the project, outlining our objectives and approach.</p>
-            <a href="city-description.pdf" class="button-link" download>Download Description</a>
-        </section>
-
-        <!-- Section 3: Problem Statement -->
-        <section class="problem-section">
-            <h2>Problem Statement</h2>
-            <p>Urban mobility faces issues like traffic congestion, lack of parking, and slow emergency response. A smart system that manages traffic, parking, and emergencies can improve efficiency and reduce delays.</p>
-            <h3>Project Description</h3>
-            <p> Project Description: Vayujiva  
-
-Vayujiva is a groundbreaking initiative envisioning a sustainable and futuristic smart city. Rooted in eco-friendly principles, Vayujiva focuses on decentralization, resource efficiency, and community well-being, offering an urban solution that is both innovative and inclusive.  
-
-Key features of Vayujiva include:  
-- Decentralized Development**: Balanced facilities and equal focus on every part of the city.  
-- Smart Technology Integration**: Advanced solutions for energy management, waste reduction, and city-wide connectivity.  
-- Eco-Conscious Infrastructure**: Renewable energy, sustainable construction, and green spaces.  
-- People-Centric Design**: Inclusive spaces for healthcare, education, and recreation, promoting social harmony.  
-
-Vayujiva addresses the pressing challenges of overpopulation, resource depletion, and environmental sustainability, presenting a vision for smarter, greener cities of the future.</p>
-        </section>
-
-        <!-- Section 4: Business Cases -->
-        <section class="business-section">
-            <h2>Business Cases Identified</h2>
-            <p>We have identified key business opportunities within the project:</p>
-             <section id="business-cases">
-            <h1>Business Cases Identified</h1>
-            <table>
-              <thead>
+    <section id="smart-parking" class="hover-effect">
+        <h2>1. Smart Parking Systems</h2>
+        <table>
+            <thead>
                 <tr>
-                  <th>SL NO</th>
-                  <th>Business Case Identified</th>
-                  <th>Description</th>
-                  <th>Owner</th>
-                  <th>Problem Tools</th>
+                    <th>Aspect</th>
+                    <th>Details</th>
                 </tr>
-              </thead>
-              <tbody>
+            </thead>
+            <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>Real-time Traffic Monitoring</td>
-                  <td>Collect, process, and store traffic data in real-time using IoT devices and sensors.</td>
-                  <td>Ananya B P</td>
-                  <td>Arrays, Hashing, Sparse Table</td>
+                    <td>Problem</td>
+                    <td>
+                        <ul>
+                            <li>Urban Congestion: Limited parking spaces causing traffic and pollution.</li>
+                            <li>Inefficient Parking Utilization: Underutilized spaces and increased search time.</li>
+                            <li>Environmental Impact: Excessive fuel consumption and emissions.</li>
+                        </ul>
+                    </td>
                 </tr>
                 <tr>
-                  <td>2</td>
-                  <td>Citizen Feedback Processing</td>
-                  <td>Collect, analyze, and act on citizen feedback regarding traffic issues.</td>
-                  <td>Ria</td>
-                  <td>Brute Force String Search, Rabin-Karp, Lookup Table</td>
+                    <td>Solution</td>
+                    <td>Smart parking systems using tries and dynamic queues for real-time slot management.</td>
                 </tr>
                 <tr>
-                  <td>3</td>
-                  <td>Smart Traffic Signal Control</td>
-                  <td>Dynamically adjust signal timings based on traffic flow and congestion.</td>
-                  <td>Sanjana</td>
-                  <td>Heap, AVL Tree, BFS, Binary Search Tree</td>
+                    <td>Applications</td>
+                    <td>
+                        <strong>Trie for Slot Availability:</strong> Efficient storage and retrieval of slots based on location.<br>
+                        <strong>Dynamic Queue:</strong> Real-time vehicle slot allocation.
+                    </td>
                 </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Smart Parking Systems</td>
-                  <td>Use Trie to store and search for parking space availability in real time, providing instant updates.</td>
-                  <td>Chinmayi K B</td>
-                  <td>Trie, Queue</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Emergency Vehicle Routing</td>
-                  <td>Implement a 2-3 Tree to handle route optimization for emergency vehicles, ensuring minimal delay.</td>
-                  <td>Ria and Sanjana</td>
-                  <td>2-3 Tree, Dijkstra’s Algorithm</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>EV Charging Station Management</td>
-                  <td>Locate and manage EV charging stations in the city.</td>
-                  <td>Ananya and Chinmayi</td>
-                  <td>Binary Search Tree, Trie, Arrays</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-    </main>
+            </tbody>
+        </table>
+    </section>
 
-    <!-- Footer Section -->
+    <section id="ev-charging" class="hover-effect">
+        <h2>2. EV Charging Station Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Problem</td>
+                    <td>
+                        <ul>
+                            <li>Growing EV adoption requires efficient charging management.</li>
+                            <li>Need for sustainable and accessible infrastructure.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solution</td>
+                    <td>Smart management using tries and BSTs for real-time allocation of EV charging slots.</td>
+                </tr>
+                <tr>
+                    <td>Applications</td>
+                    <td>
+                        <strong>Trie for Charging Slot Availability:</strong> Quick lookup of available stations and slots.<br>
+                        <strong>Binary Search Tree (BST):</strong> Real-time slot allocation and deallocation.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
     <footer>
-        <p>&copy; 2024 VAYUJIVA Team. All rights reserved.</p>
+        <p>&copy; 2024 Smart City Solutions</p>
     </footer>
+
 </body>
 </html>
