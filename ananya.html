@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F1E8D6; /* Pastel Coffee Beige */
+            margin: 0;
+            padding: 0;
+            color: #3E2723; /* Dark Brown */
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #A87C55; /* Coffee Brown */
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #D7C8B0; /* Light Coffee */
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: #D7C8B0; /* Light Coffee */
+            color: white;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding subtle shadow */
+        }
+
+        header p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content Section */
+        section {
+            background-color: #F8F4E3; /* Pale Pastel Coffee */
+            color: #5D4037; /* Medium Coffee Brown */
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2, section h3 {
+            color: #A87C55; /* Coffee Brown */
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3E2723; /* Dark Coffee */
+            color: #F1E8D6; /* Pastel Coffee Beige */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            nav {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="ananya.html">Ananya</a>
+        <a href="chinmayi.html">Chinmayi</a>
+        <a href="ria.html">Ria</a>
+        <a href="sanjana.html">Sanjana</a>
+        <a href="#about">About</a>
+    </nav>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and learn more about me and my experiences with algorithms, data structures, and project design.</p>
+    </header>
+    <section>
+        <h2>Course Learning Reflections</h2>
+        <p><strong>What are the kinds of problems we see in the nature? (iteration, recursion, backtracking)</strong></p>
+        <p>In nature, we see <strong>iteration</strong> in things like the changing seasons or animals following their migration routes year after year. <strong>Recursion</strong> shows up in patterns like the way trees branch out, shells spiral, or cabbage grows in layers. Then there’s <strong>backtracking</strong>, like when ants explore their surroundings and find their way back home, or when predators adjust their approach while hunting. These processes are like nature’s way of solving problems, much like how we use these concepts in computing.</p>
+    </section>
+    <section>
+        <p><strong>What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth</strong></p>
+        <p><strong>Space and Time Efficiency</strong><br>
+        Space efficiency refers to minimizing memory usage, while time efficiency focuses on reducing execution time. Efficient algorithms are crucial for handling large inputs, saving resources, and improving performance.</p>
+
+        <p><strong>Classes of Problems</strong><br>
+        Algorithms are classified based on their time complexity:
+        <ul>
+            <li><strong>Constant (O(1))</strong>: Fixed time (e.g., accessing an array element).</li>
+            <li><strong>Logarithmic (O(log n))</strong>: Scales with the logarithm of input (e.g., binary search).</li>
+            <li><strong>Linear (O(n))</strong>: Scales proportionally with input (e.g., array traversal).</li>
+            <li><strong>Linearithmic (O(n log n))</strong>: Common in sorting (e.g., merge sort).</li>
+            <li><strong>Quadratic (O(n^2))</strong>: Nested loops (e.g., bubble sort).</li>
+            <li><strong>Exponential (O(2^n))</strong>: Grows rapidly (e.g., brute-force TSP).</li>
+            <li><strong>Factorial (O(n!))</strong>: Extremely slow (e.g., generating permutations).</li>
+        </ul></p>
+
+        <p><strong>Orders of Growth</strong><br>
+        Growth rates help evaluate best, worst, and average-case performance, guiding algorithm selection for better efficiency in real-world applications.</p>
+    </section>
+    <section>
+        <p><strong>Take away from different design principles from chapter 2 (can use the notes provided)</strong></p>
+        <p>As I delved into different algorithms, the key concepts started to become clearer. Understanding how AVL trees and Red-Black trees keep their balance underscored the importance of structured data and efficient operations. Comparing the daring and careful approaches of DFS and BFS in graph traversal illustrated how varying strategies can effectively solve problems. Lastly, learning how sorting algorithms function—whether by dividing and merging or swapping elements—helped me grasp their underlying principles. Overall, these insights have provided a solid understanding of algorithmic foundations.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
 
