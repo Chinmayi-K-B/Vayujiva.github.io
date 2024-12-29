@@ -1,125 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        /* Enable Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+/* Enable Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
-        /* General Styles */
-        body {
-            font-family: 'Aries', sans-serif;
-            background-color: #7C444F; /* Light Grayish Mint */
-            margin: 0;
-            padding: 0;
-            color: #F0BB78; /* Dark Slate Gray */
-        }
-        
-        /* Navigation Bar */
-        nav {
-            background-color: #474E93; /* Rich Navy Blue */
-            padding: 15px;
-            text-align: center;
-        }
-        
-        nav a {
-            color: #EDDFE0; /* Muted Peach */
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        
-        nav a:hover {
-            color: #C96868; /* Coral Red */
-        }
-        
-        /* Header */
-        header {
-            background-color: #006989; /* Deep Teal */
-            text-align: center;
-            padding: 30px 15px;
-            color: #EDDFE0; /* Muted Peach */
-            font-size: 2.5rem;
-        }
-        
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #FFFFFF; /* White for contrast */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        main h1, main h2 {
-            color: #C96868; /* Coral Red */
-            margin-bottom: 10px;
-        }
-        
-        main h3 {
-            color: #F0BB78; /* Dark Slate Gray */
-            line-height: 1.6;
-        }
-        
-        .content-box {
-            background-color: #FFFFFF; /* White for the box background */
-            padding: 20px;
-            border-left: 5px solid #EDDFE0; /* Muted Peach accent */
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #006989; /* Deep Teal */
-            color: #EDDFE0; /* Muted Peach */
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        
-        footer p {
-            margin: 0;
-        }
-        
-        /* Additional Styles */
-        a {
-            color: #C96868; /* Coral Red */
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-            color: #F0BB78; /* Dark Slate Gray */
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        
-            main {
-                padding: 15px;
-            }
-        
-            header {
-                font-size: 2rem;
-            }
-        }
-        
-        </style>
-        <!--
-    <link rel="stylesheet" href="style.css">-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <header>
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6F5F5; /* Off-white/Light Beige */
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Dark Gray/Charcoal */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #006F7A; /* Teal */
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #EDDFE0; /* Muted Peach */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #FF6F61; /* Vibrant Coral */
+}
+
+/* Header */
+header {
+    background-color: #006F7A; /* Teal */
+    text-align: center;
+    padding: 30px 15px;
+    color: #EDDFE0; /* Muted Peach */
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif; /* Elegant font for headers */
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* White for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h1, main h2 {
+    color: #FF6F61; /* Vibrant Coral */
+    margin-bottom: 10px;
+}
+
+main h3 {
+    color: #333333; /* Dark Gray/Charcoal */
+    line-height: 1.6;
+}
+
+.content-box {
+    background-color: #FFFFFF; /* White for the box background */
+    padding: 20px;
+    border-left: 5px solid #EDDFE0; /* Muted Peach accent */
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #006F7A; /* Teal */
+    color: #EDDFE0; /* Muted Peach */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Additional Styles */
+a {
+    color: #FF6F61; /* Vibrant Coral */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #333333; /* Dark Gray/Charcoal */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header {
+        font-size: 2rem;
+    }
+}
+
           <!-- Navigation Bar -->
     <nav>
         <a href="home.html">Home</a>
