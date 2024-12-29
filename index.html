@@ -13,75 +13,82 @@
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f3f4f6; /* Light Gray */
+            background-color: #F8F0E3; /* Light Pastel Beige */
             margin: 0;
             padding: 0;
-            color: #1f2937; /* Dark Gray */
+            color: #333333; /* Dark Gray */
         }
         
         /* Navigation Bar */
         nav {
-            background-color: #3b82f6; /* Blue */
-            padding: 15px;
+            background-color: #A3BFFA; /* Pastel Blue */
+            padding: 20px 30px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         nav a {
             color: #ffffff; /* White */
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
+            margin: 0 25px;
+            font-weight: 600;
+            font-size: 1.2rem;
         }
         
         nav a:hover {
-            color: #ef4444; /* Red */
+            color: #F6A9B8; /* Pastel Pink */
         }
         
         /* Header */
         header {
-            background-color: #1f2937; /* Dark Gray */
+            background-color: #A3BFFA; /* Pastel Blue */
             text-align: center;
-            padding: 30px 15px;
-            color: #ffffff; /* White */
-            font-size: 2.5rem;
+            padding: 50px 20px;
+            color: #333333; /* Dark Gray */
+            font-size: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         /* Main Content */
         main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff; /* White for contrast */
-            border-radius: 10px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px 20px;
+            background-color: #ffffff; /* White */
+            border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
-        main h1, main h2 {
-            color: #3b82f6; /* Blue */
-            margin-bottom: 10px;
-        }
-        
-        main h3 {
-            color: #1f2937; /* Dark Gray */
-            line-height: 1.6;
-        }
-        
-        .content-box {
-            background-color: #ffffff; /* White for the box background */
-            padding: 20px;
-            border-left: 5px solid #ef4444; /* Red accent */
+        h1, h2 {
+            color: #A3BFFA; /* Pastel Blue */
             margin-bottom: 20px;
-            border-radius: 8px;
+        }
+        
+        h3 {
+            color: #333333; /* Dark Gray */
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content-box {
+            background-color: #ffffff; /* White */
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #F6A9B8; /* Pastel Pink */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
         
         /* Footer */
         footer {
-            background-color: #3b82f6; /* Blue */
+            background-color: #A3BFFA; /* Pastel Blue */
             color: #ffffff; /* White */
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
         
         footer p {
@@ -90,31 +97,34 @@
         
         /* Additional Styles */
         a {
-            color: #ef4444; /* Red */
+            color: #F6A9B8; /* Pastel Pink */
             text-decoration: none;
         }
         
         a:hover {
             text-decoration: underline;
-            color: #1f2937; /* Dark Gray */
+            color: #333333; /* Dark Gray */
         }
         
         /* Responsive Design */
         @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
             nav a {
                 display: block;
-                margin: 10px 0;
+                margin: 15px 0;
             }
-        
-            main {
-                padding: 15px;
-            }
-        
+
             header {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+
+            main {
+                padding: 20px;
             }
         }
-        
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -136,17 +146,27 @@
 
     <!-- Main Content -->
     <main>
-        <div class="content-box">       
-            <h2><p>About Our Project</p></h2>
+        <div class="content-box">
+            <h2>About Our Project</h2>
             <h3>We had the opportunity to conceptualize and design a futuristic smart city on a 1500 sq m plot of barren land. Our vision centered on creating a self-sustaining, interconnected urban ecosystem that balances modern infrastructure with environmental consciousness. We focused on integrating renewable energy, efficient public transportation, and accessible facilities for all sectors. The process involved tackling challenges like sustainable resource management, optimal land utilization, and addressing diverse population needs. This project reflects our innovative approach to urban planning, combining technology, functionality, and sustainability to build a city of the future.</h3>
         </div>
-        <h1><p>About the course</p></h1>
-        <h2>What is the course about?</h2>
-        <h3><p>Design and Analysis of Algorithms (DAA) isn’t just a part of computer science—it’s at the heart of it. What’s fascinating is how its principles reach beyond computers, shaping areas like science, business, and technology. This course dives into the patterns we see in nature, showing how natural processes and algorithms often inspire each other. It’s all about sharpening your analytical thinking and giving you practical tools to tackle real-world problems in creative ways.</p></h3>
-        <h2>What kind of data structures and algorithms have you studied?</h2>
-        <h3><p>Exploring data structures is like stepping into a world full of familiar and fascinating ideas. Arrays and strings feel like neat, organized rows of information, while linked lists remind you of the way web pages connect to each other. Stacks and queues bring to mind everyday things, like stacking plates or waiting in line. Trees and tries make you think of family trees or maps that help you search quickly and efficiently. Graphs, on the other hand, are like roadmaps or social networks, showing how different points are connected and helping you find the shortest path or strongest link. And then there are skip lists, which add a touch of randomness—like flipping a coin—but still manage to stay fast and reliable.</p></h3>
-        <h2>How do you connect the course with real time applications?</h2>
-        <h3><p>Algorithms are everywhere around us, even if we don’t always notice them—like the air we breathe. They help us get home faster by finding the quickest route on GPS, thanks to Dijkstra’s Algorithm, and sort through endless products on e-commerce sites to show us exactly what we’re looking for. These behind-the-scenes problem-solvers take complicated tasks and turn them into simple, seamless experiences. They’re the invisible helpers making our technology smarter, safer, and more personal every single day.</p></h3>
+
+        <h1>About the course</h1>
+
+        <div class="content-box">
+            <h2>What is the course about?</h2>
+            <h3>Design and Analysis of Algorithms (DAA) isn’t just a part of computer science—it’s at the heart of it. What’s fascinating is how its principles reach beyond computers, shaping areas like science, business, and technology. This course dives into the patterns we see in nature, showing how natural processes and algorithms often inspire each other. It’s all about sharpening your analytical thinking and giving you practical tools to tackle real-world problems in creative ways.</h3>
+        </div>
+
+        <div class="content-box">
+            <h2>What kind of data structures and algorithms have you studied?</h2>
+            <h3>Exploring data structures is like stepping into a world full of familiar and fascinating ideas. Arrays and strings feel like neat, organized rows of information, while linked lists remind you of the way web pages connect to each other. Stacks and queues bring to mind everyday things, like stacking plates or waiting in line. Trees and tries make you think of family trees or maps that help you search quickly and efficiently. Graphs, on the other hand, are like roadmaps or social networks, showing how different points are connected and helping you find the shortest path or strongest link. And then there are skip lists, which add a touch of randomness—like flipping a coin—but still manage to stay fast and reliable.</h3>
+        </div>
+
+        <div class="content-box">
+            <h2>How do you connect the course with real time applications?</h2>
+            <h3>Algorithms are everywhere around us, even if we don’t always notice them—like the air we breathe. They help us get home faster by finding the quickest route on GPS, thanks to Dijkstra’s Algorithm, and sort through endless products on e-commerce sites to show us exactly what we’re looking for. These behind-the-scenes problem-solvers take complicated tasks and turn them into simple, seamless experiences. They’re the invisible helpers making our technology smarter, safer, and more personal every single day.</h3>
+        </div>
     </main>
 
     <!-- Footer Section -->
