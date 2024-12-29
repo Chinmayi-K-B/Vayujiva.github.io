@@ -3,160 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vayujiva - Home</title>
+    <title>Vayujiva - Smart City Vision</title>
     <style>
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #F5EFE0; /* Light Coffee Cream */
-            color: #2E2B2A; /* Dark Espresso */
+            background-color: #F1E8D6; /* Pastel Coffee Beige */
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #6F4F37; /* Rich Coffee */
-            padding: 20px 50px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #FFFFFF; /* White */
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #D5B89B; /* Latte Beige */
+            color: #3E2723; /* Dark Brown */
         }
 
         /* Hero Section */
-       <!-- Hero Section -->
-<section class="hero">
-    <h1>Welcome to Vayujiva</h1>
-    <p>Explore our vision of a smart city that combines technology with sustainability. Discover the future of urban living.</p>
-</section>
-
-<style>
-    /* Hero Section */
-    .hero {
-        background-image: url('https://media.giphy.com/media/3ohs7WjlHt9kIKwMYo/giphy.gif'); /* Replace with your GIF URL */
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        color: white;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        position: relative;
-    }
-
-    .hero h1 {
-        font-size: 4rem;
-        font-weight: 600;
-        margin-bottom: 20px;
-        z-index: 2;
-    }
-
-    .hero p {
-        font-size: 1.5rem;
-        max-width: 600px;
-        margin-bottom: 30px;
-        z-index: 2;
-    }
-
-    .hero button {
-        padding: 15px 30px;
-        font-size: 1.2rem;
-        background-color: #A87C55; /* Cappuccino Brown */
-        color: #FFFFFF;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        z-index: 2;
-    }
-
-    .hero button:hover {
-        background-color: #6F4F37; /* Rich Coffee */
-    }
-
-    /* Overlay to make text readable */
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
-        z-index: 1;
-    }
-</style>
-
-
-        /* Main Content */
-        main {
-            padding: 50px 20px;
+        .hero {
+            position: relative;
+            background-color: #D7C8B0; /* Light Coffee */
+            color: white;
             text-align: center;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #6F4F37; /* Rich Coffee */
-            margin-bottom: 20px;
-        }
-
-        .section {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-
-        .card {
-            background-color: #FFFFFF;
-            border: 1px solid #D5B89B; /* Latte Beige */
+            height: 100vh;
             padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding subtle shadow */
         }
 
-        .card h3 {
-            font-size: 1.8rem;
-            color: #6F4F37; /* Rich Coffee */
-            margin-bottom: 10px;
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
-        .card p {
-            color: #2E2B2A; /* Dark Espresso */
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #6F4F37; /* Rich Coffee */
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #A87C55; /* Coffee Brown */
             color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            z-index: 2;
+        }
+
+        .hero button:hover {
+            background-color: #6F4F37; /* Rich Coffee */
+        }
+
+        /* Popup Background Behind Title */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4); /* Light translucent white background */
+            z-index: 1;
+        }
+
+        /* Content Section */
+        main {
+            background-color: #F8F4E3; /* Pale Pastel Coffee */
+            color: #5D4037; /* Medium Coffee Brown */
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        main h2, main h3 {
+            color: #A87C55; /* Coffee Brown */
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3E2723; /* Dark Coffee */
+            color: #F1E8D6; /* Pastel Coffee Beige */
             text-align: center;
             padding: 20px;
             position: relative;
@@ -166,77 +100,104 @@
 
         footer p {
             margin: 0;
-            font-size: 1rem;
+        }
+
+        /* Popup Box Styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #F1E8D6; /* Pastel Coffee Beige */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: #3E2723;
+            width: 80%;
+            text-align: center;
+        }
+
+        .popup button {
+            background-color: #A87C55;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #6F4F37;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            nav {
-                padding: 15px 20px;
-            }
-
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .card {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .section {
-                flex-direction: column;
-                align-items: center;
+            main {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="project.html">Project</a>
-        <a href="ananya.html">Ananya</a>
-        <a href="chinmayi.html">Chinmayi</a>
-        <a href="ria.html">Ria</a>
-        <a href="sanjana.html">Sanjana</a>
-    </nav>
-
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to Vayujiva</h1>
-        <p>Explore our vision of a smart city that combines technology with sustainability. Discover the future of urban living.</p>
-        <button>Explore Now</button>
+        <h1>Vayujiva</h1>
+        <p>Explore our vision of a smart, sustainable city designed for the future.</p>
+        <button id="showPopup">Learn More</button>
     </section>
 
-    <!-- Main Content -->
+    <!-- Content Section -->
     <main>
-        <h2>Our Vision</h2>
-        <div class="section">
-            <div class="card">
-                <h3>Innovative Design</h3>
-                <p>Our smart city project integrates renewable energy, efficient transportation, and modern infrastructure for a sustainable future.</p>
-            </div>
-            <div class="card">
-                <h3>Data Structures & Algorithms</h3>
-                <p>From trees to graphs, discover how algorithms help us solve real-world problems efficiently and effectively.</p>
-            </div>
-            <div class="card">
-                <h3>Real-World Applications</h3>
-                <p>Learn how algorithms shape technology, from faster travel routes to personalized shopping experiences.</p>
-            </div>
-        </div>
+        <h2>What is Vayujiva?</h2>
+        <h3>Our Vision for the Future</h3>
+        <p>Vayujiva is a groundbreaking urban design that integrates technology and nature to create a sustainable, self-sufficient city. Discover how we plan to revolutionize the way we live, work, and connect.</p>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Vayujiva. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Vayujiva. All rights reserved.</p>
     </footer>
 
+    <!-- Popup Section -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h3>Welcome to Vayujiva!</h3>
+            <p>Our project focuses on designing a self-sustaining, technologically advanced city that respects the environment. Join us in exploring a smarter way of living!</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Display popup on button click
+        const showPopupButton = document.getElementById('showPopup');
+        const popup = document.getElementById('popup');
+        const closePopupButton = document.getElementById('closePopup');
+
+        showPopupButton.addEventListener('click', function() {
+            popup.style.display = 'flex';
+        });
+
+        closePopupButton.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+
+        // Set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
