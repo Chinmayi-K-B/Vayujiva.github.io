@@ -208,7 +208,20 @@
                 Quick lookup for the nearest available parking slot in a specific area.
             </ul>
             <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Smart Parking Trie Code</a> on GitHub</p>
-
+            <p><strong>Justification</strong> 
+            A Trie (prefix tree) is an ideal data structure for managing parking slot availability due to its efficiency in handling organized, hierarchical data. Here's why a Trie works so well for this task:<br>
+            Hierarchical Structure: Parking data is naturally arranged in levels, such as:<br>
+                City → Parking Lot → Slot Type → Slot Number.<br>
+            A Trie perfectly reflects this structure, with each level of the Trie corresponding to a different piece of information, making it easy to navigate and manage the data.<br>
+            Quick Search and Retrieval:Tries are designed for fast lookups using prefixes. This means that when a user searches for parking, whether by city, lot, or slot type, the Trie can quickly find the relevant slots without having to sift through unrelated data, making searches highly efficient.<br>
+            Efficient Use of Space: Tries save memory by sharing common prefixes. So, when parking slots share similar location details (e.g., same city or lot), they don’t need to be stored multiple times, resulting in reduced storage needs.<br></p>
+            Example Justification in Action - <br>
+            If a user queries for:<br>
+            City: New York<br>
+            Lot: Central Park Lot<br>
+            Type: Handicapped<br>
+            The Trie can efficiently traverse nodes corresponding to "New York → Central Park Lot → Handicapped" to locate the first available slot, reducing the search complexity compared to traditional data structures like hashmaps or flat databases.<br>
+      
             <h3>Dynamic Queue for Real-time Slot Allocation</h3>
             <p><strong>Functionality:</strong> A queue dynamically manages the order of vehicles waiting for parking slots.</p>
             <p><strong>Example Usage:</strong></p>
@@ -217,6 +230,12 @@
                 As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).
             </ul>
             <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Parking Queue Code</a> on GitHub</p>
+            <p><strong>Justification</strong>
+            A Dynamic Queue is perfectly suited for real-time parking slot allocation due to its ability to manage vehicle order and adapt to changing conditions. Here's why it works so effectively:<br>
+            Order of Arrival: The queue follows a first-come, first-served principle, ensuring vehicles are assigned parking slots in the order they arrive, maintaining fairness and a smooth flow of traffic.<br>
+            Real-time Allocation: As soon as a parking spot becomes available, the vehicle at the front of the queue is allocated the spot, minimizing wait times and maximizing the use of available spaces.<br>
+            Priority Management: The dynamic nature of the queue allows for prioritization, such as giving preference to vehicles with special needs (e.g., handicapped parking).<br>
+            </p>
 <section id="nature" class="hover-effect">
             <h1><u>2. EV Charging Station Management</u></h1>
             <p><strong>Problem:</strong> Efficient management of EV charging stations to support the growing adoption of electric vehicles.</p>
