@@ -208,20 +208,14 @@
                 Quick lookup for the nearest available parking slot in a specific area.
             </ul>
             <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Smart Parking Trie Code</a> on GitHub</p>
-            <p><strong>Justification</strong> 
+            <p><strong>Justification</strong><br>
             A Trie (prefix tree) is an ideal data structure for managing parking slot availability due to its efficiency in handling organized, hierarchical data. Here's why a Trie works so well for this task:<br>
-            Hierarchical Structure: Parking data is naturally arranged in levels, such as:<br>
+            <u>Hierarchical Structure</u>: Parking data is naturally arranged in levels, such as:<br>
                 City → Parking Lot → Slot Type → Slot Number.<br>
             A Trie perfectly reflects this structure, with each level of the Trie corresponding to a different piece of information, making it easy to navigate and manage the data.<br>
-            Quick Search and Retrieval:Tries are designed for fast lookups using prefixes. This means that when a user searches for parking, whether by city, lot, or slot type, the Trie can quickly find the relevant slots without having to sift through unrelated data, making searches highly efficient.<br>
-            Efficient Use of Space: Tries save memory by sharing common prefixes. So, when parking slots share similar location details (e.g., same city or lot), they don’t need to be stored multiple times, resulting in reduced storage needs.<br></p>
-            Example Justification in Action - <br>
-            If a user queries for:<br>
-            City: New York<br>
-            Lot: Central Park Lot<br>
-            Type: Handicapped<br>
-            The Trie can efficiently traverse nodes corresponding to "New York → Central Park Lot → Handicapped" to locate the first available slot, reducing the search complexity compared to traditional data structures like hashmaps or flat databases.<br>
-      
+            <u>Quick Search and Retrieval</u>:Tries are designed for fast lookups using prefixes. This means that when a user searches for parking, whether by city, lot, or slot type, the Trie can quickly find the relevant slots without having to sift through unrelated data, making searches highly efficient.<br>
+            <u>Efficient Use of Space</u>: Tries save memory by sharing common prefixes. So, when parking slots share similar location details (e.g., same city or lot), they don’t need to be stored multiple times, resulting in reduced storage needs.<br></p>
+        
             <h3>Dynamic Queue for Real-time Slot Allocation</h3>
             <p><strong>Functionality:</strong> A queue dynamically manages the order of vehicles waiting for parking slots.</p>
             <p><strong>Example Usage:</strong></p>
@@ -230,11 +224,11 @@
                 As slots become available, the queue ensures that the nearest or most eligible vehicle is allocated a spot based on priority (e.g., arrival time or special needs).
             </ul>
             <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Smart_parking_trie_code.cpp" target="_blank">Parking Queue Code</a> on GitHub</p>
-            <p><strong>Justification</strong>
+            <p><strong>Justification</strong><br>
             A Dynamic Queue is perfectly suited for real-time parking slot allocation due to its ability to manage vehicle order and adapt to changing conditions. Here's why it works so effectively:<br>
-            Order of Arrival: The queue follows a first-come, first-served principle, ensuring vehicles are assigned parking slots in the order they arrive, maintaining fairness and a smooth flow of traffic.<br>
-            Real-time Allocation: As soon as a parking spot becomes available, the vehicle at the front of the queue is allocated the spot, minimizing wait times and maximizing the use of available spaces.<br>
-            Priority Management: The dynamic nature of the queue allows for prioritization, such as giving preference to vehicles with special needs (e.g., handicapped parking).<br>
+            <u>Order of Arrival</u>: The queue follows a first-come, first-served principle, ensuring vehicles are assigned parking slots in the order they arrive, maintaining fairness and a smooth flow of traffic.<br>
+            <u>Real-time Allocation</u>: As soon as a parking spot becomes available, the vehicle at the front of the queue is allocated the spot, minimizing wait times and maximizing the use of available spaces.<br>
+            <u>Priority Management</u>: The dynamic nature of the queue allows for prioritization, such as giving preference to vehicles with special needs (e.g., handicapped parking).<br>
             </p>
 <section id="nature" class="hover-effect">
             <h1><u>2. EV Charging Station Management</u></h1>
@@ -249,7 +243,13 @@
                 Quick lookup for the nearest available charging station or slot.
             </ul>
             <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Ev_charging_trie_code.cpp" target="_blank">EV Charging Trie Code</a> on GitHub</p>
-
+    
+            <p><strong>Justification</strong><br>
+                Why tries<br>
+            <u>Location-Based Searches</u>: Tries are ideal for searching locations, especially when you’re looking for stations based on part of their name or address.<br>
+            For example, if you type in “Main St,” a Trie can quickly find all the stations along Main Street without needing to search through every single station.<br>
+            <u>Auto-Completion</u>: Tries can also make suggestions as you type, helping users find charging stations by completing the location or street name as they enter it.<br>
+                
             <h3>Binary search tree for Real-time EV Slot Allocation</h3>
             <p><strong>Functionality:</strong> 
 Insert Charging Slot: Add a new charging slot to the system (represented by a unique slotID).<br>
@@ -262,6 +262,22 @@ Deallocate Slot: Once the EV finishes charging, the slot becomes available again
                 Vehicles are queued as they arrive at a charging station.<br>
                 As slots become available, the vehicle at the front of the queue is allocated a charging slot.
             <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/ev_charging_bst_code.cpp" target="_blank">EV Charging BST Code</a> on GitHub</p>
+            <p><strong>Justification</strong><br>
+            Why BSTQuick Searching: Imagine trying to find a charging station by location, power output, or availability in a huge city. A Binary Search Tree organizes stations in a way that makes it super fast to search and find exactly what you need. Instead of searching through every station, BSTs allow you to find one in logarithmic time (O(log n)), which is much faster than scanning through a list.<br>
+            <u>Efficient Updates</u>: Charging stations change their availability all the time. A BST lets you easily add or remove stations or update their status without slowing down the system.<br></p>
+    
+            <h3>Array implementation</h3>
+            <p>
+<strong>Use Case</strong>: Storing and updating real-time status data such as availability, usage stats, or maintenance schedules.<br>
+<strong>Features</strong>: Direct indexing for constant-time access. Memory-efficient for static or fixed datasets.<br>
+<strong>Example</strong>: Use an array indexed by station ID to track whether a station is "Free" or "Occupied".<br></p>
+ <p>View the full <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/ev_charging_bst_code.cpp" target="_blank">EV Charging BST Code</a> on GitHub</p>
+                
+     <p><strong>Justification</strong><br>
+         Why Arrays<br>
+<u>Fixed Data</u>: Some information about charging stations (like their ID, capacity, or power ratings) doesn’t change often. Arrays are perfect for storing this type of static data because they allow you to quickly access any piece of information without extra processing.<br>
+<u>Quick Updates</u>: For real-time updates—like when a station becomes available or occupied—arrays can quickly reflect these changes with O(1) time complexity.<br>
+    
         </section>
         <h1><u>3. SDGs Alignment</u></h1>
         <p><strong>Smart Parking systems - SDG 9: Industry, Innovation, and Infrastructure</strong><br>
