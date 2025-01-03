@@ -238,7 +238,7 @@
       <p><strong>Functionality:</strong> A trie efficiently stores and retrieves EV charging slots based on location, type, and availability.</p>
       <p><strong>Prefix Search</strong>: Tries shine when we want to search by prefixes, such as finding all stations starting with "super" or "green". It makes autocomplete features fast and accurate.<br>
 <strong>Efficient for Long Strings</strong>: Unlike other structures, the Trie only uses as many nodes as there are characters in the station name, so long names don’t slow down the system.<br>
-<strong>Fast Lookups and Insertions</strong>: With a Trie, searching for a station and adding a new one happens in linear time based on the length of the name (O(m), where m is the number of characters in the name). This is efficient for handling large lists of stations.</p><br>
+<strong>Fast Lookups and Insertions</strong>: With a Trie, searching for a station and adding a new one happens in linear time based on the length of the name (O(m), where m is the number of characters in the name). This is efficient for handling large lists of stations.</p>
   <p><strong>Justification</strong><br>
 <u>Prefix Matching</u>: Tries allow for efficient retrieval of all strings that share a common prefix. This makes them ideal for applications where prefix searches are common (e.g., autocomplete functionality).<br>
 <u>Fast Search and Insert (O(m))</u>: Both searching and insertion operations in a Trie have a time complexity of O(m), where m is the length of the string. This is particularly useful for dealing with longer strings, like station names, since the operation does not depend on the total number of stations.<br>
@@ -254,7 +254,7 @@
 
             <h3>Array implementation</h3>
             <p><strong>Fast Access</strong>: Arrays allow us to quickly access a specific "box" (or child node) using its position, which is determined by the character of the station name. It’s like having a quick-access drawer for each letter of the alphabet.<br>
-<strong>Efficient Space Use</strong>: Using an array is memory-efficient since we only need 26 "slots" for each node. This is perfect when we’re working with the fixed English alphabet (a-z).</p><br>
+<strong>Efficient Space Use</strong>: Using an array is memory-efficient since we only need 26 "slots" for each node. This is perfect when we’re working with the fixed English alphabet (a-z).</p>
 <p><strong>Justification</strong><br>
 <u>Fast Lookups</u>: Arrays provide O(1) time complexity for accessing any element by index, making them perfect for the TrieNode's child pointers. This ensures that each character of the station name is processed efficiently.<br>
 <u>Space Efficiency</u>: Using a fixed-size array ensures efficient use of memory as it holds exactly 26 pointers, one for each letter in the alphabet.<br>
