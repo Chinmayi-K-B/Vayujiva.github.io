@@ -235,33 +235,24 @@
             <p><strong>Solution:</strong> Smart management using tries and dynamic queues for real-time allocation and efficient utilization of charging slots.</p>
             <h2> Applications:</h2>
             <h3>EV Charging Slot Availability using Trie</h3>
-            <p><strong>Functionality:</strong> A trie efficiently stores and retrieves EV charging slots based on location, type, and availability.</p>
-            <p><strong>Example Usage:</strong></p>
-            <ul>
-                Each node in the trie represents a level of detail (e.g., city > charging station > slot number).<br>
-                Quick lookup for the nearest available charging station or slot.
-            </ul>
-    
-            <p><strong>Justification</strong><br>
-            <u>Location-Based Searches</u>: Tries are ideal for searching locations, especially when you’re looking for stations based on part of their name or address.<br>
-            For example, if you type in “Main St,” a Trie can quickly find all the stations along Main Street without needing to search through every single station.<br>
-            <u>Auto-Completion</u>: Tries can also make suggestions as you type, helping users find charging stations by completing the location or street name as they enter it.<br>
+      <p><strong>Functionality:</strong> A trie efficiently stores and retrieves EV charging slots based on location, type, and availability.</p>
+      <p><strong>Example Usage:</strong></p>
+      <p><strong>Prefix Search</strong>: Tries shine when we want to search by prefixes, such as finding all stations starting with "super" or "green". It makes autocomplete features fast and accurate.<br>
+<strong>Efficient for Long Strings</strong>: Unlike other structures, the Trie only uses as many nodes as there are characters in the station name, so long names don’t slow down the system.<br>
+<strong>Fast Lookups and Insertions</strong>: With a Trie, searching for a station and adding a new one happens in linear time based on the length of the name (O(m), where m is the number of characters in the name). This is efficient for handling large lists of stations.</p><br>
+  <p><strong>Justification</strong><br>
+<u>Prefix Matching</u>: Tries allow for efficient retrieval of all strings that share a common prefix. This makes them ideal for applications where prefix searches are common (e.g., autocomplete functionality).<br>
+<u>Fast Search and Insert (O(m))</u>: Both searching and insertion operations in a Trie have a time complexity of O(m), where m is the length of the string. This is particularly useful for dealing with longer strings, like station names, since the operation does not depend on the total number of stations.<br>
+<u>Space Efficiency</u>: Although Tries might use more memory than other data structures (due to storing a node for each character), they are very space-efficient when dealing with common prefixes. Shared prefixes reduce memory usage across similar station names.</p><br>
                 
             <h3>Binary search tree for Real-time EV Slot Allocation</h3>
-            <p><strong>Functionality:</strong> 
-Insert Charging Slot: Add a new charging slot to the system (represented by a unique slotID).<br>
-                
-Allocate Slot to EV: Allocate a slot to an electric vehicle (EV) if the slot is available.<br>
-                
-Deallocate Slot: Once the EV finishes charging, the slot becomes available again.<br></p>
-        
-            <p><strong>Example Usage:</strong></p>
-                Vehicles are queued as they arrive at a charging station.<br>
-                As slots become available, the vehicle at the front of the queue is allocated a charging slot.
-            <p><strong>Justification</strong><br>
-            <u>Searching</u>: Imagine trying to find a charging station by location, power output, or availability in a huge city. A Binary Search Tree organizes stations in a way that makes it super fast to search and find exactly what you need. Instead of searching through every station, BSTs allow you to find one in logarithmic time (O(log n)), which is much faster than scanning through a list.<br>
-            <u>Efficient Updates</u>: Charging stations change their availability all the time. A BST lets you easily add or remove stations or update their status without slowing down the system.<br></p>
-    
+                <p><strong>Sorted Data</strong>: The BST automatically keeps stations in alphabetical order, so finding a station by name is quick and efficient.<br>
+<strong>Fast Searching, Insertion, and Deletion</strong>: Since the tree is sorted, operations like searching, adding, or removing stations happen in a logarithmic time (O(log n)). This means, no matter how many stations we have, the operations stay efficient.</p><br>
+<p><strong>Justification</strong><br>
+<u>Efficient Search (O(log n))</u>: The BST provides efficient searching (O(log n) time complexity for a balanced tree), which is important for quickly locating a station by name.<br>
+<u>Logarithmic Insertion/Deletion</u>: Both insert and delete operations are performed in O(log n) time, allowing the system to handle a large number of charging stations efficiently.<br>
+<u>In-Order Traversal</u>: The BST allows for easy in-order traversal, which can be used to display the stations in alphabetical order. This is a natural advantage for applications like generating lists of stations in sorted order.</p><br>
+
             <h3>Array implementation</h3>
             <p><strong>Fast Access</strong>: Arrays allow us to quickly access a specific "box" (or child node) using its position, which is determined by the character of the station name. It’s like having a quick-access drawer for each letter of the alphabet.<br>
 <strong>Efficient Space Use</strong>: Using an array is memory-efficient since we only need 26 "slots" for each node. This is perfect when we’re working with the fixed English alphabet (a-z).</p><br>
