@@ -244,9 +244,9 @@
 <u>Fast Search and Insert (O(m))</u>: Both searching and insertion operations in a Trie have a time complexity of O(m), where m is the length of the string. This is particularly useful for dealing with longer strings, like station names, since the operation does not depend on the total number of stations.<br>
 <u>Space Efficiency</u>: Although Tries might use more memory than other data structures (due to storing a node for each character), they are very space-efficient when dealing with common prefixes. Shared prefixes reduce memory usage across similar station names.</p><br>
                 
-            <h3>Binary search tree for Real-time EV Slot Allocation</h3>
+            <h3>Binary search tree implementation</h3>
                 <p><strong>Sorted Data</strong>: The BST automatically keeps stations in alphabetical order, so finding a station by name is quick and efficient.<br>
-<strong>Fast Searching, Insertion, and Deletion</strong>: Since the tree is sorted, operations like searching, adding, or removing stations happen in a logarithmic time (O(log n)). This means, no matter how many stations we have, the operations stay efficient.</p><br>
+<strong>Fast Searching, Insertion, and Deletion</strong>: Since the tree is sorted, operations like searching, adding, or removing stations happen in a logarithmic time (O(log n)). This means, no matter how many stations we have, the operations stay efficient.</p>
 <p><strong>Justification</strong><br>
 <u>Efficient Search (O(log n))</u>: The BST provides efficient searching (O(log n) time complexity for a balanced tree), which is important for quickly locating a station by name.<br>
 <u>Logarithmic Insertion/Deletion</u>: Both insert and delete operations are performed in O(log n) time, allowing the system to handle a large number of charging stations efficiently.<br>
