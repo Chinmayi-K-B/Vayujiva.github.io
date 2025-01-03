@@ -263,15 +263,12 @@ Deallocate Slot: Once the EV finishes charging, the slot becomes available again
             <u>Efficient Updates</u>: Charging stations change their availability all the time. A BST lets you easily add or remove stations or update their status without slowing down the system.<br></p>
     
             <h3>Array implementation</h3>
-            <p>
-<strong>Use Case</strong>: Storing and updating real-time status data such as availability, usage stats, or maintenance schedules.<br>
-<strong>Features</strong>: Direct indexing for constant-time access. Memory-efficient for static or fixed datasets.<br>
-<strong>Example</strong>: Use an array indexed by station ID to track whether a station is "Free" or "Occupied".<br></p>
-                
-     <p><strong>Justification</strong><br>
-         Why Arrays<br>
-<u>Fixed Data</u>: Some information about charging stations (like their ID, capacity, or power ratings) doesn’t change often. Arrays are perfect for storing this type of static data because they allow you to quickly access any piece of information without extra processing.<br>
-<u>Quick Updates</u>: For real-time updates—like when a station becomes available or occupied—arrays can quickly reflect these changes with O(1) time complexity.<br>
+            <p><strong>Fast Access</strong>: Arrays allow us to quickly access a specific "box" (or child node) using its position, which is determined by the character of the station name. It’s like having a quick-access drawer for each letter of the alphabet.<br>
+<strong>Efficient Space Use</strong>: Using an array is memory-efficient since we only need 26 "slots" for each node. This is perfect when we’re working with the fixed English alphabet (a-z).</p><br>
+<p><strong>Justification</strong><br>
+<u>Fast Lookups</u>: Arrays provide O(1) time complexity for accessing any element by index, making them perfect for the TrieNode's child pointers. This ensures that each character of the station name is processed efficiently.<br>
+<u>Space Efficiency</u>: Using a fixed-size array ensures efficient use of memory as it holds exactly 26 pointers, one for each letter in the alphabet.<br>
+<u>No Overhead</u>: The array has minimal memory overhead compared to other structures like hash maps, making it ideal for the fixed alphabet size.</p><br>
          <p>View the full Implementation code of <a href="https://github.com/Chinmayi-K-B/Code.github.io/blob/main/Ev_charging_station.cpp" target="_blank">EV Charging Station management</a> on GitHub</p>
     
         </section>
